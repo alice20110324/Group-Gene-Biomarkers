@@ -1,0 +1,101 @@
+nohup: 忽略输入
+ConvAttMLP_new.py:1490: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  inputs=torch.tensor(inputs,dtype=torch.float)
+ConvAttMLP_new.py:1491: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  targets=torch.tensor(targets,dtype=torch.float)
+ConvAttMLP_new.py:1490: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  inputs=torch.tensor(inputs,dtype=torch.float)
+ConvAttMLP_new.py:1491: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  targets=torch.tensor(targets,dtype=torch.float)
+/home/zhengfang/anaconda3/envs/my_pytorch_gnn/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ConvAttMLP_new.py:1584: DeprecationWarning: scipy.interp is deprecated and will be removed in SciPy 2.0.0, use numpy.interp instead
+  mean_tpr += interp(all_fpr, fpr[i], tpr[i])
+ConvAttMLP_new.py:1584: DeprecationWarning: scipy.interp is deprecated and will be removed in SciPy 2.0.0, use numpy.interp instead
+  mean_tpr += interp(all_fpr, fpr[i], tpr[i])
+ConvAttMLP_new.py:1584: DeprecationWarning: scipy.interp is deprecated and will be removed in SciPy 2.0.0, use numpy.interp instead
+  mean_tpr += interp(all_fpr, fpr[i], tpr[i])
+ConvAttMLP_new.py:1584: DeprecationWarning: scipy.interp is deprecated and will be removed in SciPy 2.0.0, use numpy.interp instead
+  mean_tpr += interp(all_fpr, fpr[i], tpr[i])
+ConvAttMLP_new.py:1584: DeprecationWarning: scipy.interp is deprecated and will be removed in SciPy 2.0.0, use numpy.interp instead
+  mean_tpr += interp(all_fpr, fpr[i], tpr[i])
+ConvAttMLP_new.py:1584: DeprecationWarning: scipy.interp is deprecated and will be removed in SciPy 2.0.0, use numpy.interp instead
+  mean_tpr += interp(all_fpr, fpr[i], tpr[i])
+ConvAttMLP_new.py:1584: DeprecationWarning: scipy.interp is deprecated and will be removed in SciPy 2.0.0, use numpy.interp instead
+  mean_tpr += interp(all_fpr, fpr[i], tpr[i])
+ConvAttMLP_new.py:1584: DeprecationWarning: scipy.interp is deprecated and will be removed in SciPy 2.0.0, use numpy.interp instead
+  mean_tpr += interp(all_fpr, fpr[i], tpr[i])
+ConvAttMLP_new.py:1584: DeprecationWarning: scipy.interp is deprecated and will be removed in SciPy 2.0.0, use numpy.interp instead
+  mean_tpr += interp(all_fpr, fpr[i], tpr[i])
+ConvAttMLP_origon(
+  (bn0): BatchNorm1d(3300, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (fc1): Linear(in_features=3300, out_features=1100, bias=True)
+  (fc11): Linear(in_features=1100, out_features=1100, bias=True)
+  (bn1): BatchNorm1d(1100, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (fc2): Linear(in_features=2200, out_features=100, bias=True)
+  (bn2): BatchNorm1d(100, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (fc3): Linear(in_features=100, out_features=9, bias=True)
+  (bn3): BatchNorm1d(9, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (drop): Dropout(p=0.5, inplace=False)
+  (conv1): Conv1d(1, 8, kernel_size=(5,), stride=(1,), padding=(2,))
+  (bn4): BatchNorm1d(3300, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv2): Conv1d(8, 16, kernel_size=(5,), stride=(1,), padding=(2,))
+  (bn5): BatchNorm1d(3300, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (pool2): MaxPool1d(kernel_size=3, stride=3, padding=0, dilation=1, ceil_mode=False)
+  (conv3): Conv1d(16, 1, kernel_size=(1,), stride=(1,))
+  (pool3): MaxPool1d(kernel_size=3, stride=3, padding=0, dilation=1, ceil_mode=False)
+  (bn6): BatchNorm1d(1100, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn7): BatchNorm1d(2200, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (avg_pool): AvgPool1d(kernel_size=(3300,), stride=(3300,), padding=(0,))
+  (max_pool): MaxPool1d(kernel_size=3300, stride=3300, padding=0, dilation=1, ceil_mode=False)
+  (fc): Sequential(
+    (0): Conv1d(16, 2, kernel_size=(1,), stride=(1,), bias=False)
+    (1): ReLU()
+    (2): Conv1d(2, 16, kernel_size=(1,), stride=(1,), bias=False)
+    (3): Sigmoid()
+  )
+)
+MLP1(
+  (bn0): BatchNorm1d(237, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (fc1): Linear(in_features=237, out_features=2000, bias=True)
+  (bn1): BatchNorm1d(2000, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (fc2): Linear(in_features=2000, out_features=100, bias=True)
+  (bn2): BatchNorm1d(100, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (fc3): Linear(in_features=100, out_features=9, bias=True)
+  (bn3): BatchNorm1d(9, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (drop): Dropout(p=0.5, inplace=False)
+)
+ConvAttMLP_origon(
+  (bn0): BatchNorm1d(3300, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (fc1): Linear(in_features=3300, out_features=1100, bias=True)
+  (fc11): Linear(in_features=1100, out_features=1100, bias=True)
+  (bn1): BatchNorm1d(1100, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (fc2): Linear(in_features=2200, out_features=100, bias=True)
+  (bn2): BatchNorm1d(100, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (fc3): Linear(in_features=100, out_features=9, bias=True)
+  (bn3): BatchNorm1d(9, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (drop): Dropout(p=0.5, inplace=False)
+  (conv1): Conv1d(1, 8, kernel_size=(5,), stride=(1,), padding=(2,))
+  (bn4): BatchNorm1d(3300, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv2): Conv1d(8, 16, kernel_size=(5,), stride=(1,), padding=(2,))
+  (bn5): BatchNorm1d(3300, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (pool2): MaxPool1d(kernel_size=3, stride=3, padding=0, dilation=1, ceil_mode=False)
+  (conv3): Conv1d(16, 1, kernel_size=(1,), stride=(1,))
+  (pool3): MaxPool1d(kernel_size=3, stride=3, padding=0, dilation=1, ceil_mode=False)
+  (bn6): BatchNorm1d(1100, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn7): BatchNorm1d(2200, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (avg_pool): AvgPool1d(kernel_size=(3300,), stride=(3300,), padding=(0,))
+  (max_pool): MaxPool1d(kernel_size=3300, stride=3300, padding=0, dilation=1, ceil_mode=False)
+  (fc): Sequential(
+    (0): Conv1d(16, 2, kernel_size=(1,), stride=(1,), bias=False)
+    (1): ReLU()
+    (2): Conv1d(2, 16, kernel_size=(1,), stride=(1,), bias=False)
+    (3): Sigmoid()
+  )
+)
+138 3301
+f1_score:  %.4f 0.6816298659449997
+accuracy_score: 0.7318840579710145
+recall_score: 0.6887024866926827
+pre_recall: 0.7077970683233842
+n_classes: 9

@@ -1,0 +1,9 @@
+nohup python train_davis_model1.py > davis_model1_without_cross.out 2>&1 &
+nohup python train_davis_model1.py --gpu=1 > davis_model1_without_cross.out 2>&1 &
+
+
+
+nohup python ConvAttMLP_10layers.py --gpu=1 > ConvAttMLP_10layers.out 2>&1 &
+nvidia-smi
+
+nohup python ConvAttMLP_new.py --gpu=1 > ConvAtt_without_MLP.out 2>&1 &

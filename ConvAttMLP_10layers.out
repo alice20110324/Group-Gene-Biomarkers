@@ -1,0 +1,2424 @@
+nohup: 忽略输入
+ConvAttMLP_10layers(
+  (bn0): BatchNorm1d(3300, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (fc1): Linear(in_features=3300, out_features=1100, bias=True)
+  (fc11): Linear(in_features=1100, out_features=1100, bias=True)
+  (bn1): BatchNorm1d(1100, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (fc2): Linear(in_features=2200, out_features=100, bias=True)
+  (bn2): BatchNorm1d(100, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (fc3): Linear(in_features=100, out_features=9, bias=True)
+  (bn3): BatchNorm1d(9, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (drop): Dropout(p=0.5, inplace=False)
+  (conv1): Conv1d(1, 8, kernel_size=(5,), stride=(1,), padding=(2,))
+  (conv2): Conv1d(8, 16, kernel_size=(5,), stride=(1,), padding=(2,))
+  (conv3): Conv1d(16, 16, kernel_size=(5,), stride=(1,), padding=(2,))
+  (conv4): Conv1d(16, 1, kernel_size=(1,), stride=(1,))
+  (bn4): BatchNorm1d(3300, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn5): BatchNorm1d(3300, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (pool2): MaxPool1d(kernel_size=3, stride=3, padding=0, dilation=1, ceil_mode=False)
+  (pool3): MaxPool1d(kernel_size=3, stride=3, padding=0, dilation=1, ceil_mode=False)
+  (bn6): BatchNorm1d(1100, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn7): BatchNorm1d(2200, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (avg_pool): AvgPool1d(kernel_size=(3300,), stride=(3300,), padding=(0,))
+  (max_pool): MaxPool1d(kernel_size=3300, stride=3300, padding=0, dilation=1, ceil_mode=False)
+  (fc): Sequential(
+    (0): Conv1d(16, 2, kernel_size=(1,), stride=(1,), bias=False)
+    (1): ReLU()
+    (2): Conv1d(2, 16, kernel_size=(1,), stride=(1,), bias=False)
+    (3): Sigmoid()
+  )
+  (layers): ModuleList(
+    (0): Sequential(
+      (0): Conv1d(1, 8, kernel_size=(5,), stride=(1,), padding=(2,))
+      (1): BatchNorm1d(3300, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): Conv1d(8, 16, kernel_size=(5,), stride=(1,), padding=(2,))
+      (3): Conv1d(16, 16, kernel_size=(5,), stride=(1,), padding=(2,))
+      (4): Conv1d(16, 1, kernel_size=(1,), stride=(1,))
+      (5): AvgPool1d(kernel_size=(3300,), stride=(3300,), padding=(0,))
+      (6): MaxPool1d(kernel_size=3300, stride=3300, padding=0, dilation=1, ceil_mode=False)
+    )
+    (1): Sequential(
+      (0): Conv1d(1, 8, kernel_size=(5,), stride=(1,), padding=(2,))
+      (1): BatchNorm1d(3300, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): Conv1d(8, 16, kernel_size=(5,), stride=(1,), padding=(2,))
+      (3): Conv1d(16, 16, kernel_size=(5,), stride=(1,), padding=(2,))
+      (4): Conv1d(16, 1, kernel_size=(1,), stride=(1,))
+      (5): AvgPool1d(kernel_size=(3300,), stride=(3300,), padding=(0,))
+      (6): MaxPool1d(kernel_size=3300, stride=3300, padding=0, dilation=1, ceil_mode=False)
+    )
+  )
+)
+MLP1(
+  (bn0): BatchNorm1d(237, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (fc1): Linear(in_features=237, out_features=2000, bias=True)
+  (bn1): BatchNorm1d(2000, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (fc2): Linear(in_features=2000, out_features=100, bias=True)
+  (bn2): BatchNorm1d(100, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (fc3): Linear(in_features=100, out_features=9, bias=True)
+  (bn3): BatchNorm1d(9, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (drop): Dropout(p=0.5, inplace=False)
+)
+549 3301
+549 3301
+total_train_accuracy: tensor(0.1077, device='cuda:0')
+Training Epoch: 0, total loss: 269.826157
+total_train_accuracy: tensor(0.1301, device='cuda:0')
+Training Epoch: 1, total loss: 269.182809
+total_train_accuracy: tensor(0.2033, device='cuda:0')
+Training Epoch: 2, total loss: 267.097105
+total_train_accuracy: tensor(0.1951, device='cuda:0')
+Training Epoch: 3, total loss: 266.136564
+total_train_accuracy: tensor(0.2398, device='cuda:0')
+Training Epoch: 4, total loss: 263.919326
+total_train_accuracy: tensor(0.2398, device='cuda:0')
+Training Epoch: 5, total loss: 263.166959
+total_train_accuracy: tensor(0.3150, device='cuda:0')
+Training Epoch: 6, total loss: 259.846213
+total_train_accuracy: tensor(0.3069, device='cuda:0')
+Training Epoch: 7, total loss: 260.226195
+total_train_accuracy: tensor(0.3191, device='cuda:0')
+Training Epoch: 8, total loss: 258.717849
+total_train_accuracy: tensor(0.3272, device='cuda:0')
+Training Epoch: 9, total loss: 256.600815
+total_train_accuracy: tensor(0.3516, device='cuda:0')
+Training Epoch: 10, total loss: 254.887175
+total_train_accuracy: tensor(0.3476, device='cuda:0')
+Training Epoch: 11, total loss: 255.350373
+total_train_accuracy: tensor(0.3557, device='cuda:0')
+Training Epoch: 12, total loss: 253.429710
+total_train_accuracy: tensor(0.3720, device='cuda:0')
+Training Epoch: 13, total loss: 252.693224
+total_train_accuracy: tensor(0.3882, device='cuda:0')
+Training Epoch: 14, total loss: 249.948536
+total_train_accuracy: tensor(0.3821, device='cuda:0')
+Training Epoch: 15, total loss: 250.301551
+total_train_accuracy: tensor(0.3699, device='cuda:0')
+Training Epoch: 16, total loss: 250.085227
+total_train_accuracy: tensor(0.3821, device='cuda:0')
+Training Epoch: 17, total loss: 249.771141
+total_train_accuracy: tensor(0.3984, device='cuda:0')
+Training Epoch: 18, total loss: 248.072160
+total_train_accuracy: tensor(0.4146, device='cuda:0')
+Training Epoch: 19, total loss: 246.597112
+total_train_accuracy: tensor(0.4146, device='cuda:0')
+Training Epoch: 20, total loss: 246.711707
+total_train_accuracy: tensor(0.4675, device='cuda:0')
+Training Epoch: 21, total loss: 243.866186
+total_train_accuracy: tensor(0.4207, device='cuda:0')
+Training Epoch: 22, total loss: 245.261218
+total_train_accuracy: tensor(0.4329, device='cuda:0')
+Training Epoch: 23, total loss: 245.358166
+total_train_accuracy: tensor(0.4329, device='cuda:0')
+Training Epoch: 24, total loss: 244.575602
+total_train_accuracy: tensor(0.4756, device='cuda:0')
+Training Epoch: 25, total loss: 241.733381
+total_train_accuracy: tensor(0.4736, device='cuda:0')
+Training Epoch: 26, total loss: 240.878727
+total_train_accuracy: tensor(0.4634, device='cuda:0')
+Training Epoch: 27, total loss: 241.575184
+total_train_accuracy: tensor(0.4553, device='cuda:0')
+Training Epoch: 28, total loss: 241.387458
+total_train_accuracy: tensor(0.4756, device='cuda:0')
+Training Epoch: 29, total loss: 240.192690
+total_train_accuracy: tensor(0.4472, device='cuda:0')
+Training Epoch: 30, total loss: 240.764241
+total_train_accuracy: tensor(0.4898, device='cuda:0')
+Training Epoch: 31, total loss: 238.518673
+total_train_accuracy: tensor(0.4614, device='cuda:0')
+Training Epoch: 32, total loss: 240.450791
+total_train_accuracy: tensor(0.4980, device='cuda:0')
+Training Epoch: 33, total loss: 237.677682
+total_train_accuracy: tensor(0.5203, device='cuda:0')
+Training Epoch: 34, total loss: 235.773230
+total_train_accuracy: tensor(0.4675, device='cuda:0')
+Training Epoch: 35, total loss: 238.183687
+total_train_accuracy: tensor(0.5142, device='cuda:0')
+Training Epoch: 36, total loss: 235.723307
+total_train_accuracy: tensor(0.4919, device='cuda:0')
+Training Epoch: 37, total loss: 237.209130
+total_train_accuracy: tensor(0.5061, device='cuda:0')
+Training Epoch: 38, total loss: 235.641956
+total_train_accuracy: tensor(0.4939, device='cuda:0')
+Training Epoch: 39, total loss: 237.699830
+total_train_accuracy: tensor(0.5244, device='cuda:0')
+Training Epoch: 40, total loss: 234.263543
+total_train_accuracy: tensor(0.4878, device='cuda:0')
+Training Epoch: 41, total loss: 235.347508
+total_train_accuracy: tensor(0.5081, device='cuda:0')
+Training Epoch: 42, total loss: 234.109654
+total_train_accuracy: tensor(0.4959, device='cuda:0')
+Training Epoch: 43, total loss: 235.313402
+total_train_accuracy: tensor(0.5488, device='cuda:0')
+Training Epoch: 44, total loss: 231.039811
+total_train_accuracy: tensor(0.5285, device='cuda:0')
+Training Epoch: 45, total loss: 232.477362
+total_train_accuracy: tensor(0.5203, device='cuda:0')
+Training Epoch: 46, total loss: 232.368323
+total_train_accuracy: tensor(0.5346, device='cuda:0')
+Training Epoch: 47, total loss: 230.751961
+total_train_accuracy: tensor(0.5346, device='cuda:0')
+Training Epoch: 48, total loss: 230.638905
+total_train_accuracy: tensor(0.5589, device='cuda:0')
+Training Epoch: 49, total loss: 229.087566
+total_train_accuracy: tensor(0.5346, device='cuda:0')
+Training Epoch: 50, total loss: 230.794302
+total_train_accuracy: tensor(0.5407, device='cuda:0')
+Training Epoch: 51, total loss: 229.694746
+total_train_accuracy: tensor(0.5224, device='cuda:0')
+Training Epoch: 52, total loss: 232.463742
+total_train_accuracy: tensor(0.5366, device='cuda:0')
+Training Epoch: 53, total loss: 229.885473
+total_train_accuracy: tensor(0.5610, device='cuda:0')
+Training Epoch: 54, total loss: 228.082687
+total_train_accuracy: tensor(0.5244, device='cuda:0')
+Training Epoch: 55, total loss: 230.960113
+total_train_accuracy: tensor(0.5224, device='cuda:0')
+Training Epoch: 56, total loss: 230.902659
+total_train_accuracy: tensor(0.5549, device='cuda:0')
+Training Epoch: 57, total loss: 228.746946
+total_train_accuracy: tensor(0.5264, device='cuda:0')
+Training Epoch: 58, total loss: 230.493528
+total_train_accuracy: tensor(0.5488, device='cuda:0')
+Training Epoch: 59, total loss: 228.559710
+total_train_accuracy: tensor(0.5569, device='cuda:0')
+Training Epoch: 60, total loss: 228.041219
+total_train_accuracy: tensor(0.5508, device='cuda:0')
+Training Epoch: 61, total loss: 227.966621
+total_train_accuracy: tensor(0.5671, device='cuda:0')
+Training Epoch: 62, total loss: 227.119174
+total_train_accuracy: tensor(0.5813, device='cuda:0')
+Training Epoch: 63, total loss: 225.856496
+total_train_accuracy: tensor(0.5650, device='cuda:0')
+Training Epoch: 64, total loss: 227.305073
+total_train_accuracy: tensor(0.5386, device='cuda:0')
+Training Epoch: 65, total loss: 229.461666
+total_train_accuracy: tensor(0.5386, device='cuda:0')
+Training Epoch: 66, total loss: 228.417579
+total_train_accuracy: tensor(0.5610, device='cuda:0')
+Training Epoch: 67, total loss: 228.079933
+total_train_accuracy: tensor(0.5793, device='cuda:0')
+Training Epoch: 68, total loss: 225.405584
+total_train_accuracy: tensor(0.5630, device='cuda:0')
+Training Epoch: 69, total loss: 226.037456
+total_train_accuracy: tensor(0.5528, device='cuda:0')
+Training Epoch: 70, total loss: 227.197215
+total_train_accuracy: tensor(0.5508, device='cuda:0')
+Training Epoch: 71, total loss: 227.931619
+total_train_accuracy: tensor(0.5894, device='cuda:0')
+Training Epoch: 72, total loss: 224.553491
+total_train_accuracy: tensor(0.5772, device='cuda:0')
+Training Epoch: 73, total loss: 223.858933
+total_train_accuracy: tensor(0.5528, device='cuda:0')
+Training Epoch: 74, total loss: 225.761296
+total_train_accuracy: tensor(0.5752, device='cuda:0')
+Training Epoch: 75, total loss: 224.780738
+total_train_accuracy: tensor(0.5711, device='cuda:0')
+Training Epoch: 76, total loss: 224.899945
+total_train_accuracy: tensor(0.5793, device='cuda:0')
+Training Epoch: 77, total loss: 223.992127
+total_train_accuracy: tensor(0.5691, device='cuda:0')
+Training Epoch: 78, total loss: 225.807876
+total_train_accuracy: tensor(0.5650, device='cuda:0')
+Training Epoch: 79, total loss: 225.614185
+total_train_accuracy: tensor(0.5569, device='cuda:0')
+Training Epoch: 80, total loss: 226.360981
+total_train_accuracy: tensor(0.6057, device='cuda:0')
+Training Epoch: 81, total loss: 222.322122
+total_train_accuracy: tensor(0.5996, device='cuda:0')
+Training Epoch: 82, total loss: 222.202151
+total_train_accuracy: tensor(0.5793, device='cuda:0')
+Training Epoch: 83, total loss: 223.675422
+total_train_accuracy: tensor(0.5752, device='cuda:0')
+Training Epoch: 84, total loss: 224.297314
+total_train_accuracy: tensor(0.5833, device='cuda:0')
+Training Epoch: 85, total loss: 223.711022
+total_train_accuracy: tensor(0.5671, device='cuda:0')
+Training Epoch: 86, total loss: 224.214061
+total_train_accuracy: tensor(0.6138, device='cuda:0')
+Training Epoch: 87, total loss: 221.268350
+total_train_accuracy: tensor(0.5630, device='cuda:0')
+Training Epoch: 88, total loss: 224.252872
+total_train_accuracy: tensor(0.5772, device='cuda:0')
+Training Epoch: 89, total loss: 223.854694
+total_train_accuracy: tensor(0.5772, device='cuda:0')
+Training Epoch: 90, total loss: 223.869184
+total_train_accuracy: tensor(0.5793, device='cuda:0')
+Training Epoch: 91, total loss: 222.839589
+total_train_accuracy: tensor(0.5752, device='cuda:0')
+Training Epoch: 92, total loss: 224.142052
+total_train_accuracy: tensor(0.5996, device='cuda:0')
+Training Epoch: 93, total loss: 221.110215
+total_train_accuracy: tensor(0.5874, device='cuda:0')
+Training Epoch: 94, total loss: 222.672908
+total_train_accuracy: tensor(0.5894, device='cuda:0')
+Training Epoch: 95, total loss: 223.024722
+total_train_accuracy: tensor(0.6016, device='cuda:0')
+Training Epoch: 96, total loss: 221.018706
+total_train_accuracy: tensor(0.5935, device='cuda:0')
+Training Epoch: 97, total loss: 221.893622
+total_train_accuracy: tensor(0.5874, device='cuda:0')
+Training Epoch: 98, total loss: 223.170880
+total_train_accuracy: tensor(0.5874, device='cuda:0')
+Training Epoch: 99, total loss: 222.177667
+total_train_accuracy: tensor(0.5874, device='cuda:0')
+Training Epoch: 100, total loss: 222.428245
+the  0  epoch ends
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+total_test_accuracy: tensor(0.6731, device='cuda:0')
+acc_test_each_k: tensor(0.6731, device='cuda:0')
+549 3301
+549 3301
+total_train_accuracy: tensor(0.5752, device='cuda:0')
+Training Epoch: 0, total loss: 223.821303
+total_train_accuracy: tensor(0.5935, device='cuda:0')
+Training Epoch: 1, total loss: 222.056229
+total_train_accuracy: tensor(0.5752, device='cuda:0')
+Training Epoch: 2, total loss: 222.424185
+total_train_accuracy: tensor(0.5772, device='cuda:0')
+Training Epoch: 3, total loss: 223.850161
+total_train_accuracy: tensor(0.5976, device='cuda:0')
+Training Epoch: 4, total loss: 221.376465
+total_train_accuracy: tensor(0.5935, device='cuda:0')
+Training Epoch: 5, total loss: 222.040700
+total_train_accuracy: tensor(0.6037, device='cuda:0')
+Training Epoch: 6, total loss: 220.417004
+total_train_accuracy: tensor(0.5854, device='cuda:0')
+Training Epoch: 7, total loss: 222.322838
+total_train_accuracy: tensor(0.5650, device='cuda:0')
+Training Epoch: 8, total loss: 225.801880
+total_train_accuracy: tensor(0.5772, device='cuda:0')
+Training Epoch: 9, total loss: 223.031893
+total_train_accuracy: tensor(0.5610, device='cuda:0')
+Training Epoch: 10, total loss: 224.325899
+total_train_accuracy: tensor(0.5915, device='cuda:0')
+Training Epoch: 11, total loss: 221.933961
+total_train_accuracy: tensor(0.6179, device='cuda:0')
+Training Epoch: 12, total loss: 219.378972
+total_train_accuracy: tensor(0.6037, device='cuda:0')
+Training Epoch: 13, total loss: 220.173994
+total_train_accuracy: tensor(0.6220, device='cuda:0')
+Training Epoch: 14, total loss: 218.028546
+total_train_accuracy: tensor(0.6057, device='cuda:0')
+Training Epoch: 15, total loss: 219.978529
+total_train_accuracy: tensor(0.5935, device='cuda:0')
+Training Epoch: 16, total loss: 221.495521
+total_train_accuracy: tensor(0.5488, device='cuda:0')
+Training Epoch: 17, total loss: 225.839532
+total_train_accuracy: tensor(0.5630, device='cuda:0')
+Training Epoch: 18, total loss: 223.810926
+total_train_accuracy: tensor(0.5915, device='cuda:0')
+Training Epoch: 19, total loss: 220.362911
+total_train_accuracy: tensor(0.5793, device='cuda:0')
+Training Epoch: 20, total loss: 221.233940
+total_train_accuracy: tensor(0.6077, device='cuda:0')
+Training Epoch: 21, total loss: 219.641769
+total_train_accuracy: tensor(0.6118, device='cuda:0')
+Training Epoch: 22, total loss: 218.875780
+total_train_accuracy: tensor(0.5976, device='cuda:0')
+Training Epoch: 23, total loss: 219.819279
+total_train_accuracy: tensor(0.5955, device='cuda:0')
+Training Epoch: 24, total loss: 220.229363
+total_train_accuracy: tensor(0.6037, device='cuda:0')
+Training Epoch: 25, total loss: 221.399616
+total_train_accuracy: tensor(0.5732, device='cuda:0')
+Training Epoch: 26, total loss: 223.662414
+total_train_accuracy: tensor(0.6280, device='cuda:0')
+Training Epoch: 27, total loss: 217.754287
+total_train_accuracy: tensor(0.6098, device='cuda:0')
+Training Epoch: 28, total loss: 220.313956
+total_train_accuracy: tensor(0.6037, device='cuda:0')
+Training Epoch: 29, total loss: 218.923704
+total_train_accuracy: tensor(0.6179, device='cuda:0')
+Training Epoch: 30, total loss: 218.521328
+total_train_accuracy: tensor(0.5894, device='cuda:0')
+Training Epoch: 31, total loss: 222.282535
+total_train_accuracy: tensor(0.6037, device='cuda:0')
+Training Epoch: 32, total loss: 219.119840
+total_train_accuracy: tensor(0.6098, device='cuda:0')
+Training Epoch: 33, total loss: 219.802802
+total_train_accuracy: tensor(0.5955, device='cuda:0')
+Training Epoch: 34, total loss: 219.527382
+total_train_accuracy: tensor(0.6159, device='cuda:0')
+Training Epoch: 35, total loss: 218.306524
+total_train_accuracy: tensor(0.6016, device='cuda:0')
+Training Epoch: 36, total loss: 221.592529
+total_train_accuracy: tensor(0.6037, device='cuda:0')
+Training Epoch: 37, total loss: 219.965417
+total_train_accuracy: tensor(0.6016, device='cuda:0')
+Training Epoch: 38, total loss: 220.807198
+total_train_accuracy: tensor(0.5915, device='cuda:0')
+Training Epoch: 39, total loss: 221.566184
+total_train_accuracy: tensor(0.5996, device='cuda:0')
+Training Epoch: 40, total loss: 219.125629
+total_train_accuracy: tensor(0.5935, device='cuda:0')
+Training Epoch: 41, total loss: 219.680311
+total_train_accuracy: tensor(0.5996, device='cuda:0')
+Training Epoch: 42, total loss: 220.243604
+total_train_accuracy: tensor(0.6382, device='cuda:0')
+Training Epoch: 43, total loss: 216.249534
+total_train_accuracy: tensor(0.6199, device='cuda:0')
+Training Epoch: 44, total loss: 219.179412
+total_train_accuracy: tensor(0.6057, device='cuda:0')
+Training Epoch: 45, total loss: 218.297004
+total_train_accuracy: tensor(0.6016, device='cuda:0')
+Training Epoch: 46, total loss: 220.802511
+total_train_accuracy: tensor(0.6138, device='cuda:0')
+Training Epoch: 47, total loss: 218.466094
+total_train_accuracy: tensor(0.6138, device='cuda:0')
+Training Epoch: 48, total loss: 217.628011
+total_train_accuracy: tensor(0.6220, device='cuda:0')
+Training Epoch: 49, total loss: 218.135327
+total_train_accuracy: tensor(0.6016, device='cuda:0')
+Training Epoch: 50, total loss: 221.086636
+total_train_accuracy: tensor(0.6179, device='cuda:0')
+Training Epoch: 51, total loss: 217.380332
+total_train_accuracy: tensor(0.6260, device='cuda:0')
+Training Epoch: 52, total loss: 216.670409
+total_train_accuracy: tensor(0.5894, device='cuda:0')
+Training Epoch: 53, total loss: 219.565670
+total_train_accuracy: tensor(0.6341, device='cuda:0')
+Training Epoch: 54, total loss: 216.284881
+total_train_accuracy: tensor(0.5915, device='cuda:0')
+Training Epoch: 55, total loss: 219.684009
+total_train_accuracy: tensor(0.6179, device='cuda:0')
+Training Epoch: 56, total loss: 218.115901
+total_train_accuracy: tensor(0.6260, device='cuda:0')
+Training Epoch: 57, total loss: 216.906410
+total_train_accuracy: tensor(0.6280, device='cuda:0')
+Training Epoch: 58, total loss: 215.911522
+total_train_accuracy: tensor(0.6260, device='cuda:0')
+Training Epoch: 59, total loss: 217.266939
+total_train_accuracy: tensor(0.6646, device='cuda:0')
+Training Epoch: 60, total loss: 214.173695
+total_train_accuracy: tensor(0.6504, device='cuda:0')
+Training Epoch: 61, total loss: 215.471914
+total_train_accuracy: tensor(0.6037, device='cuda:0')
+Training Epoch: 62, total loss: 220.237811
+total_train_accuracy: tensor(0.6260, device='cuda:0')
+Training Epoch: 63, total loss: 217.324232
+total_train_accuracy: tensor(0.6341, device='cuda:0')
+Training Epoch: 64, total loss: 216.292490
+total_train_accuracy: tensor(0.6159, device='cuda:0')
+Training Epoch: 65, total loss: 218.269568
+total_train_accuracy: tensor(0.6280, device='cuda:0')
+Training Epoch: 66, total loss: 215.813885
+total_train_accuracy: tensor(0.5894, device='cuda:0')
+Training Epoch: 67, total loss: 219.643692
+total_train_accuracy: tensor(0.6260, device='cuda:0')
+Training Epoch: 68, total loss: 216.881024
+total_train_accuracy: tensor(0.6159, device='cuda:0')
+Training Epoch: 69, total loss: 217.604753
+total_train_accuracy: tensor(0.6463, device='cuda:0')
+Training Epoch: 70, total loss: 215.078746
+total_train_accuracy: tensor(0.6301, device='cuda:0')
+Training Epoch: 71, total loss: 216.068277
+total_train_accuracy: tensor(0.6382, device='cuda:0')
+Training Epoch: 72, total loss: 216.201449
+total_train_accuracy: tensor(0.5955, device='cuda:0')
+Training Epoch: 73, total loss: 219.773080
+total_train_accuracy: tensor(0.6321, device='cuda:0')
+Training Epoch: 74, total loss: 216.992350
+total_train_accuracy: tensor(0.6362, device='cuda:0')
+Training Epoch: 75, total loss: 215.695370
+total_train_accuracy: tensor(0.6321, device='cuda:0')
+Training Epoch: 76, total loss: 216.666267
+total_train_accuracy: tensor(0.6321, device='cuda:0')
+Training Epoch: 77, total loss: 215.906604
+total_train_accuracy: tensor(0.6280, device='cuda:0')
+Training Epoch: 78, total loss: 217.928120
+total_train_accuracy: tensor(0.6138, device='cuda:0')
+Training Epoch: 79, total loss: 219.149270
+total_train_accuracy: tensor(0.6260, device='cuda:0')
+Training Epoch: 80, total loss: 216.740640
+total_train_accuracy: tensor(0.6037, device='cuda:0')
+Training Epoch: 81, total loss: 218.941277
+total_train_accuracy: tensor(0.6484, device='cuda:0')
+Training Epoch: 82, total loss: 214.567077
+total_train_accuracy: tensor(0.6667, device='cuda:0')
+Training Epoch: 83, total loss: 212.738593
+total_train_accuracy: tensor(0.6545, device='cuda:0')
+Training Epoch: 84, total loss: 214.450006
+total_train_accuracy: tensor(0.6402, device='cuda:0')
+Training Epoch: 85, total loss: 215.194238
+total_train_accuracy: tensor(0.6240, device='cuda:0')
+Training Epoch: 86, total loss: 217.437961
+total_train_accuracy: tensor(0.6301, device='cuda:0')
+Training Epoch: 87, total loss: 216.188261
+total_train_accuracy: tensor(0.6484, device='cuda:0')
+Training Epoch: 88, total loss: 214.092345
+total_train_accuracy: tensor(0.6280, device='cuda:0')
+Training Epoch: 89, total loss: 216.515209
+total_train_accuracy: tensor(0.6260, device='cuda:0')
+Training Epoch: 90, total loss: 217.213271
+total_train_accuracy: tensor(0.6687, device='cuda:0')
+Training Epoch: 91, total loss: 213.107580
+total_train_accuracy: tensor(0.6179, device='cuda:0')
+Training Epoch: 92, total loss: 217.763230
+total_train_accuracy: tensor(0.6057, device='cuda:0')
+Training Epoch: 93, total loss: 219.118750
+total_train_accuracy: tensor(0.6382, device='cuda:0')
+Training Epoch: 94, total loss: 215.996866
+total_train_accuracy: tensor(0.6504, device='cuda:0')
+Training Epoch: 95, total loss: 214.128016
+total_train_accuracy: tensor(0.6667, device='cuda:0')
+Training Epoch: 96, total loss: 213.199009
+total_train_accuracy: tensor(0.6077, device='cuda:0')
+Training Epoch: 97, total loss: 216.509966
+total_train_accuracy: tensor(0.6423, device='cuda:0')
+Training Epoch: 98, total loss: 215.533813
+total_train_accuracy: tensor(0.6728, device='cuda:0')
+Training Epoch: 99, total loss: 212.145842
+total_train_accuracy: tensor(0.6159, device='cuda:0')
+Training Epoch: 100, total loss: 217.691613
+the  1  epoch ends
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+total_test_accuracy: tensor(0.7692, device='cuda:0')
+acc_test_each_k: tensor(0.7692, device='cuda:0')
+549 3301
+549 3301
+total_train_accuracy: tensor(0.5915, device='cuda:0')
+Training Epoch: 0, total loss: 219.957528
+total_train_accuracy: tensor(0.5935, device='cuda:0')
+Training Epoch: 1, total loss: 220.937146
+total_train_accuracy: tensor(0.6463, device='cuda:0')
+Training Epoch: 2, total loss: 216.675628
+total_train_accuracy: tensor(0.6484, device='cuda:0')
+Training Epoch: 3, total loss: 215.000777
+total_train_accuracy: tensor(0.6545, device='cuda:0')
+Training Epoch: 4, total loss: 213.631661
+total_train_accuracy: tensor(0.6341, device='cuda:0')
+Training Epoch: 5, total loss: 216.669356
+total_train_accuracy: tensor(0.6341, device='cuda:0')
+Training Epoch: 6, total loss: 215.397036
+total_train_accuracy: tensor(0.6626, device='cuda:0')
+Training Epoch: 7, total loss: 213.034378
+total_train_accuracy: tensor(0.6585, device='cuda:0')
+Training Epoch: 8, total loss: 213.512563
+total_train_accuracy: tensor(0.5935, device='cuda:0')
+Training Epoch: 9, total loss: 220.110177
+total_train_accuracy: tensor(0.6220, device='cuda:0')
+Training Epoch: 10, total loss: 216.881408
+total_train_accuracy: tensor(0.6199, device='cuda:0')
+Training Epoch: 11, total loss: 216.758576
+total_train_accuracy: tensor(0.6504, device='cuda:0')
+Training Epoch: 12, total loss: 214.099720
+total_train_accuracy: tensor(0.6646, device='cuda:0')
+Training Epoch: 13, total loss: 214.309609
+total_train_accuracy: tensor(0.6484, device='cuda:0')
+Training Epoch: 14, total loss: 214.388063
+total_train_accuracy: tensor(0.6382, device='cuda:0')
+Training Epoch: 15, total loss: 215.400251
+total_train_accuracy: tensor(0.6382, device='cuda:0')
+Training Epoch: 16, total loss: 215.634972
+total_train_accuracy: tensor(0.6667, device='cuda:0')
+Training Epoch: 17, total loss: 212.805479
+total_train_accuracy: tensor(0.6443, device='cuda:0')
+Training Epoch: 18, total loss: 215.046169
+total_train_accuracy: tensor(0.6220, device='cuda:0')
+Training Epoch: 19, total loss: 215.930515
+total_train_accuracy: tensor(0.6240, device='cuda:0')
+Training Epoch: 20, total loss: 216.863947
+total_train_accuracy: tensor(0.6443, device='cuda:0')
+Training Epoch: 21, total loss: 215.454812
+total_train_accuracy: tensor(0.6728, device='cuda:0')
+Training Epoch: 22, total loss: 212.602158
+total_train_accuracy: tensor(0.6260, device='cuda:0')
+Training Epoch: 23, total loss: 218.050327
+total_train_accuracy: tensor(0.6626, device='cuda:0')
+Training Epoch: 24, total loss: 213.491109
+total_train_accuracy: tensor(0.6443, device='cuda:0')
+Training Epoch: 25, total loss: 214.763807
+total_train_accuracy: tensor(0.6423, device='cuda:0')
+Training Epoch: 26, total loss: 214.444823
+total_train_accuracy: tensor(0.6504, device='cuda:0')
+Training Epoch: 27, total loss: 213.708335
+total_train_accuracy: tensor(0.6240, device='cuda:0')
+Training Epoch: 28, total loss: 217.357301
+total_train_accuracy: tensor(0.6362, device='cuda:0')
+Training Epoch: 29, total loss: 216.640225
+total_train_accuracy: tensor(0.6748, device='cuda:0')
+Training Epoch: 30, total loss: 212.264541
+total_train_accuracy: tensor(0.6382, device='cuda:0')
+Training Epoch: 31, total loss: 214.148102
+total_train_accuracy: tensor(0.6707, device='cuda:0')
+Training Epoch: 32, total loss: 211.719526
+total_train_accuracy: tensor(0.6545, device='cuda:0')
+Training Epoch: 33, total loss: 214.507888
+total_train_accuracy: tensor(0.6626, device='cuda:0')
+Training Epoch: 34, total loss: 213.762375
+total_train_accuracy: tensor(0.6382, device='cuda:0')
+Training Epoch: 35, total loss: 214.380061
+total_train_accuracy: tensor(0.6484, device='cuda:0')
+Training Epoch: 36, total loss: 215.507996
+total_train_accuracy: tensor(0.6707, device='cuda:0')
+Training Epoch: 37, total loss: 213.070812
+total_train_accuracy: tensor(0.6728, device='cuda:0')
+Training Epoch: 38, total loss: 212.512204
+total_train_accuracy: tensor(0.6606, device='cuda:0')
+Training Epoch: 39, total loss: 214.173151
+total_train_accuracy: tensor(0.6301, device='cuda:0')
+Training Epoch: 40, total loss: 215.611575
+total_train_accuracy: tensor(0.6504, device='cuda:0')
+Training Epoch: 41, total loss: 213.573492
+total_train_accuracy: tensor(0.6768, device='cuda:0')
+Training Epoch: 42, total loss: 211.730585
+total_train_accuracy: tensor(0.6748, device='cuda:0')
+Training Epoch: 43, total loss: 212.390601
+total_train_accuracy: tensor(0.6321, device='cuda:0')
+Training Epoch: 44, total loss: 216.024131
+total_train_accuracy: tensor(0.6341, device='cuda:0')
+Training Epoch: 45, total loss: 215.453873
+total_train_accuracy: tensor(0.6545, device='cuda:0')
+Training Epoch: 46, total loss: 214.098746
+total_train_accuracy: tensor(0.6646, device='cuda:0')
+Training Epoch: 47, total loss: 212.011137
+total_train_accuracy: tensor(0.6545, device='cuda:0')
+Training Epoch: 48, total loss: 213.496348
+total_train_accuracy: tensor(0.6504, device='cuda:0')
+Training Epoch: 49, total loss: 213.855298
+total_train_accuracy: tensor(0.6484, device='cuda:0')
+Training Epoch: 50, total loss: 213.428331
+total_train_accuracy: tensor(0.6362, device='cuda:0')
+Training Epoch: 51, total loss: 214.395529
+total_train_accuracy: tensor(0.6768, device='cuda:0')
+Training Epoch: 52, total loss: 210.937546
+total_train_accuracy: tensor(0.6850, device='cuda:0')
+Training Epoch: 53, total loss: 210.585631
+total_train_accuracy: tensor(0.6565, device='cuda:0')
+Training Epoch: 54, total loss: 213.676178
+total_train_accuracy: tensor(0.6565, device='cuda:0')
+Training Epoch: 55, total loss: 213.659238
+total_train_accuracy: tensor(0.6463, device='cuda:0')
+Training Epoch: 56, total loss: 213.607761
+total_train_accuracy: tensor(0.6850, device='cuda:0')
+Training Epoch: 57, total loss: 210.301014
+total_train_accuracy: tensor(0.7114, device='cuda:0')
+Training Epoch: 58, total loss: 208.695238
+total_train_accuracy: tensor(0.6606, device='cuda:0')
+Training Epoch: 59, total loss: 213.058389
+total_train_accuracy: tensor(0.6707, device='cuda:0')
+Training Epoch: 60, total loss: 211.783005
+total_train_accuracy: tensor(0.6646, device='cuda:0')
+Training Epoch: 61, total loss: 213.688387
+total_train_accuracy: tensor(0.6748, device='cuda:0')
+Training Epoch: 62, total loss: 210.864592
+total_train_accuracy: tensor(0.6687, device='cuda:0')
+Training Epoch: 63, total loss: 212.725536
+total_train_accuracy: tensor(0.6870, device='cuda:0')
+Training Epoch: 64, total loss: 210.079059
+total_train_accuracy: tensor(0.6565, device='cuda:0')
+Training Epoch: 65, total loss: 212.979004
+total_train_accuracy: tensor(0.6504, device='cuda:0')
+Training Epoch: 66, total loss: 213.094012
+total_train_accuracy: tensor(0.6707, device='cuda:0')
+Training Epoch: 67, total loss: 211.524237
+total_train_accuracy: tensor(0.6992, device='cuda:0')
+Training Epoch: 68, total loss: 209.426058
+total_train_accuracy: tensor(0.6524, device='cuda:0')
+Training Epoch: 69, total loss: 212.088142
+total_train_accuracy: tensor(0.6768, device='cuda:0')
+Training Epoch: 70, total loss: 209.520541
+total_train_accuracy: tensor(0.6606, device='cuda:0')
+Training Epoch: 71, total loss: 212.888366
+total_train_accuracy: tensor(0.6829, device='cuda:0')
+Training Epoch: 72, total loss: 210.845899
+total_train_accuracy: tensor(0.6768, device='cuda:0')
+Training Epoch: 73, total loss: 210.781032
+total_train_accuracy: tensor(0.6870, device='cuda:0')
+Training Epoch: 74, total loss: 211.295373
+total_train_accuracy: tensor(0.6809, device='cuda:0')
+Training Epoch: 75, total loss: 210.781344
+total_train_accuracy: tensor(0.6687, device='cuda:0')
+Training Epoch: 76, total loss: 211.691438
+total_train_accuracy: tensor(0.6606, device='cuda:0')
+Training Epoch: 77, total loss: 213.529268
+total_train_accuracy: tensor(0.6768, device='cuda:0')
+Training Epoch: 78, total loss: 210.430241
+total_train_accuracy: tensor(0.6890, device='cuda:0')
+Training Epoch: 79, total loss: 209.725859
+total_train_accuracy: tensor(0.6850, device='cuda:0')
+Training Epoch: 80, total loss: 209.608633
+total_train_accuracy: tensor(0.6545, device='cuda:0')
+Training Epoch: 81, total loss: 213.817633
+total_train_accuracy: tensor(0.6789, device='cuda:0')
+Training Epoch: 82, total loss: 209.572229
+total_train_accuracy: tensor(0.6585, device='cuda:0')
+Training Epoch: 83, total loss: 214.312291
+total_train_accuracy: tensor(0.6890, device='cuda:0')
+Training Epoch: 84, total loss: 210.072103
+total_train_accuracy: tensor(0.6545, device='cuda:0')
+Training Epoch: 85, total loss: 212.795016
+total_train_accuracy: tensor(0.6809, device='cuda:0')
+Training Epoch: 86, total loss: 211.763214
+total_train_accuracy: tensor(0.6768, device='cuda:0')
+Training Epoch: 87, total loss: 210.643629
+total_train_accuracy: tensor(0.6463, device='cuda:0')
+Training Epoch: 88, total loss: 213.121930
+total_train_accuracy: tensor(0.6646, device='cuda:0')
+Training Epoch: 89, total loss: 212.370585
+total_train_accuracy: tensor(0.6829, device='cuda:0')
+Training Epoch: 90, total loss: 210.835544
+total_train_accuracy: tensor(0.6707, device='cuda:0')
+Training Epoch: 91, total loss: 211.989645
+total_train_accuracy: tensor(0.6687, device='cuda:0')
+Training Epoch: 92, total loss: 211.156948
+total_train_accuracy: tensor(0.6951, device='cuda:0')
+Training Epoch: 93, total loss: 209.399448
+total_train_accuracy: tensor(0.6890, device='cuda:0')
+Training Epoch: 94, total loss: 209.398156
+total_train_accuracy: tensor(0.6626, device='cuda:0')
+Training Epoch: 95, total loss: 211.176954
+total_train_accuracy: tensor(0.6829, device='cuda:0')
+Training Epoch: 96, total loss: 210.152606
+total_train_accuracy: tensor(0.6707, device='cuda:0')
+Training Epoch: 97, total loss: 210.036348
+total_train_accuracy: tensor(0.6951, device='cuda:0')
+Training Epoch: 98, total loss: 209.584552
+total_train_accuracy: tensor(0.6870, device='cuda:0')
+Training Epoch: 99, total loss: 209.853339
+total_train_accuracy: tensor(0.6728, device='cuda:0')
+Training Epoch: 100, total loss: 211.855340
+the  2  epoch ends
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+total_test_accuracy: tensor(0.8269, device='cuda:0')
+acc_test_each_k: tensor(0.8269, device='cuda:0')
+549 3301
+549 3301
+total_train_accuracy: tensor(0.6402, device='cuda:0')
+Training Epoch: 0, total loss: 214.995759
+total_train_accuracy: tensor(0.6728, device='cuda:0')
+Training Epoch: 1, total loss: 211.875439
+total_train_accuracy: tensor(0.6423, device='cuda:0')
+Training Epoch: 2, total loss: 213.719159
+total_train_accuracy: tensor(0.6321, device='cuda:0')
+Training Epoch: 3, total loss: 214.693167
+total_train_accuracy: tensor(0.6484, device='cuda:0')
+Training Epoch: 4, total loss: 212.396237
+total_train_accuracy: tensor(0.6789, device='cuda:0')
+Training Epoch: 5, total loss: 210.636562
+total_train_accuracy: tensor(0.6626, device='cuda:0')
+Training Epoch: 6, total loss: 212.059749
+total_train_accuracy: tensor(0.6768, device='cuda:0')
+Training Epoch: 7, total loss: 210.812116
+total_train_accuracy: tensor(0.6585, device='cuda:0')
+Training Epoch: 8, total loss: 212.164738
+total_train_accuracy: tensor(0.6585, device='cuda:0')
+Training Epoch: 9, total loss: 212.992223
+total_train_accuracy: tensor(0.6667, device='cuda:0')
+Training Epoch: 10, total loss: 213.011682
+total_train_accuracy: tensor(0.6809, device='cuda:0')
+Training Epoch: 11, total loss: 211.127267
+total_train_accuracy: tensor(0.6606, device='cuda:0')
+Training Epoch: 12, total loss: 212.848909
+total_train_accuracy: tensor(0.6565, device='cuda:0')
+Training Epoch: 13, total loss: 213.072520
+total_train_accuracy: tensor(0.6931, device='cuda:0')
+Training Epoch: 14, total loss: 208.469236
+total_train_accuracy: tensor(0.6606, device='cuda:0')
+Training Epoch: 15, total loss: 212.472309
+total_train_accuracy: tensor(0.6179, device='cuda:0')
+Training Epoch: 16, total loss: 217.243387
+total_train_accuracy: tensor(0.6545, device='cuda:0')
+Training Epoch: 17, total loss: 213.472240
+total_train_accuracy: tensor(0.6789, device='cuda:0')
+Training Epoch: 18, total loss: 212.328743
+total_train_accuracy: tensor(0.6585, device='cuda:0')
+Training Epoch: 19, total loss: 212.138546
+total_train_accuracy: tensor(0.6606, device='cuda:0')
+Training Epoch: 20, total loss: 212.023418
+total_train_accuracy: tensor(0.6951, device='cuda:0')
+Training Epoch: 21, total loss: 210.827929
+total_train_accuracy: tensor(0.6728, device='cuda:0')
+Training Epoch: 22, total loss: 211.647388
+total_train_accuracy: tensor(0.6626, device='cuda:0')
+Training Epoch: 23, total loss: 211.910464
+total_train_accuracy: tensor(0.6667, device='cuda:0')
+Training Epoch: 24, total loss: 211.258750
+total_train_accuracy: tensor(0.6565, device='cuda:0')
+Training Epoch: 25, total loss: 212.962493
+total_train_accuracy: tensor(0.6748, device='cuda:0')
+Training Epoch: 26, total loss: 211.477690
+total_train_accuracy: tensor(0.6626, device='cuda:0')
+Training Epoch: 27, total loss: 211.517220
+total_train_accuracy: tensor(0.6382, device='cuda:0')
+Training Epoch: 28, total loss: 214.006529
+total_train_accuracy: tensor(0.6931, device='cuda:0')
+Training Epoch: 29, total loss: 209.702652
+total_train_accuracy: tensor(0.6463, device='cuda:0')
+Training Epoch: 30, total loss: 212.813014
+total_train_accuracy: tensor(0.6667, device='cuda:0')
+Training Epoch: 31, total loss: 211.917039
+total_train_accuracy: tensor(0.6768, device='cuda:0')
+Training Epoch: 32, total loss: 209.647720
+total_train_accuracy: tensor(0.6545, device='cuda:0')
+Training Epoch: 33, total loss: 211.614788
+total_train_accuracy: tensor(0.6443, device='cuda:0')
+Training Epoch: 34, total loss: 213.516222
+total_train_accuracy: tensor(0.6463, device='cuda:0')
+Training Epoch: 35, total loss: 212.774742
+total_train_accuracy: tensor(0.6626, device='cuda:0')
+Training Epoch: 36, total loss: 211.731302
+total_train_accuracy: tensor(0.6545, device='cuda:0')
+Training Epoch: 37, total loss: 212.359611
+total_train_accuracy: tensor(0.6626, device='cuda:0')
+Training Epoch: 38, total loss: 210.965896
+total_train_accuracy: tensor(0.7012, device='cuda:0')
+Training Epoch: 39, total loss: 207.230279
+total_train_accuracy: tensor(0.6524, device='cuda:0')
+Training Epoch: 40, total loss: 213.135014
+total_train_accuracy: tensor(0.6789, device='cuda:0')
+Training Epoch: 41, total loss: 210.209511
+total_train_accuracy: tensor(0.6850, device='cuda:0')
+Training Epoch: 42, total loss: 208.989834
+total_train_accuracy: tensor(0.6728, device='cuda:0')
+Training Epoch: 43, total loss: 209.311786
+total_train_accuracy: tensor(0.6829, device='cuda:0')
+Training Epoch: 44, total loss: 209.444312
+total_train_accuracy: tensor(0.6911, device='cuda:0')
+Training Epoch: 45, total loss: 208.685272
+total_train_accuracy: tensor(0.6911, device='cuda:0')
+Training Epoch: 46, total loss: 210.080746
+total_train_accuracy: tensor(0.6524, device='cuda:0')
+Training Epoch: 47, total loss: 212.873233
+total_train_accuracy: tensor(0.6768, device='cuda:0')
+Training Epoch: 48, total loss: 211.180162
+total_train_accuracy: tensor(0.6545, device='cuda:0')
+Training Epoch: 49, total loss: 212.863629
+total_train_accuracy: tensor(0.6870, device='cuda:0')
+Training Epoch: 50, total loss: 209.391692
+total_train_accuracy: tensor(0.6992, device='cuda:0')
+Training Epoch: 51, total loss: 208.491475
+total_train_accuracy: tensor(0.6687, device='cuda:0')
+Training Epoch: 52, total loss: 210.508709
+total_train_accuracy: tensor(0.6565, device='cuda:0')
+Training Epoch: 53, total loss: 211.974780
+total_train_accuracy: tensor(0.6443, device='cuda:0')
+Training Epoch: 54, total loss: 212.794387
+total_train_accuracy: tensor(0.6646, device='cuda:0')
+Training Epoch: 55, total loss: 210.721845
+total_train_accuracy: tensor(0.6545, device='cuda:0')
+Training Epoch: 56, total loss: 212.535051
+total_train_accuracy: tensor(0.6829, device='cuda:0')
+Training Epoch: 57, total loss: 210.137754
+total_train_accuracy: tensor(0.6870, device='cuda:0')
+Training Epoch: 58, total loss: 210.685145
+total_train_accuracy: tensor(0.6606, device='cuda:0')
+Training Epoch: 59, total loss: 212.081053
+total_train_accuracy: tensor(0.6545, device='cuda:0')
+Training Epoch: 60, total loss: 212.902869
+total_train_accuracy: tensor(0.6850, device='cuda:0')
+Training Epoch: 61, total loss: 209.053568
+total_train_accuracy: tensor(0.6646, device='cuda:0')
+Training Epoch: 62, total loss: 211.355521
+total_train_accuracy: tensor(0.6626, device='cuda:0')
+Training Epoch: 63, total loss: 213.731734
+total_train_accuracy: tensor(0.6545, device='cuda:0')
+Training Epoch: 64, total loss: 213.179211
+total_train_accuracy: tensor(0.6667, device='cuda:0')
+Training Epoch: 65, total loss: 212.569067
+total_train_accuracy: tensor(0.6992, device='cuda:0')
+Training Epoch: 66, total loss: 208.684716
+total_train_accuracy: tensor(0.6707, device='cuda:0')
+Training Epoch: 67, total loss: 211.934072
+total_train_accuracy: tensor(0.6443, device='cuda:0')
+Training Epoch: 68, total loss: 212.428722
+total_train_accuracy: tensor(0.6565, device='cuda:0')
+Training Epoch: 69, total loss: 212.248009
+total_train_accuracy: tensor(0.6707, device='cuda:0')
+Training Epoch: 70, total loss: 211.033527
+total_train_accuracy: tensor(0.6992, device='cuda:0')
+Training Epoch: 71, total loss: 207.686519
+total_train_accuracy: tensor(0.6728, device='cuda:0')
+Training Epoch: 72, total loss: 210.747765
+total_train_accuracy: tensor(0.6850, device='cuda:0')
+Training Epoch: 73, total loss: 210.119618
+total_train_accuracy: tensor(0.6748, device='cuda:0')
+Training Epoch: 74, total loss: 211.102639
+total_train_accuracy: tensor(0.6606, device='cuda:0')
+Training Epoch: 75, total loss: 210.439769
+total_train_accuracy: tensor(0.6890, device='cuda:0')
+Training Epoch: 76, total loss: 208.660608
+total_train_accuracy: tensor(0.7114, device='cuda:0')
+Training Epoch: 77, total loss: 207.289854
+total_train_accuracy: tensor(0.7195, device='cuda:0')
+Training Epoch: 78, total loss: 207.893439
+total_train_accuracy: tensor(0.6850, device='cuda:0')
+Training Epoch: 79, total loss: 210.303020
+total_train_accuracy: tensor(0.6585, device='cuda:0')
+Training Epoch: 80, total loss: 212.301454
+total_train_accuracy: tensor(0.6890, device='cuda:0')
+Training Epoch: 81, total loss: 208.858884
+total_train_accuracy: tensor(0.6850, device='cuda:0')
+Training Epoch: 82, total loss: 209.261958
+total_train_accuracy: tensor(0.6687, device='cuda:0')
+Training Epoch: 83, total loss: 211.160614
+total_train_accuracy: tensor(0.6951, device='cuda:0')
+Training Epoch: 84, total loss: 207.429909
+total_train_accuracy: tensor(0.6789, device='cuda:0')
+Training Epoch: 85, total loss: 210.689641
+total_train_accuracy: tensor(0.6931, device='cuda:0')
+Training Epoch: 86, total loss: 208.135976
+total_train_accuracy: tensor(0.6728, device='cuda:0')
+Training Epoch: 87, total loss: 209.745253
+total_train_accuracy: tensor(0.6687, device='cuda:0')
+Training Epoch: 88, total loss: 210.786897
+total_train_accuracy: tensor(0.6789, device='cuda:0')
+Training Epoch: 89, total loss: 209.538047
+total_train_accuracy: tensor(0.6911, device='cuda:0')
+Training Epoch: 90, total loss: 209.732255
+total_train_accuracy: tensor(0.6789, device='cuda:0')
+Training Epoch: 91, total loss: 209.792629
+total_train_accuracy: tensor(0.6524, device='cuda:0')
+Training Epoch: 92, total loss: 212.240116
+total_train_accuracy: tensor(0.6687, device='cuda:0')
+Training Epoch: 93, total loss: 211.142137
+total_train_accuracy: tensor(0.6768, device='cuda:0')
+Training Epoch: 94, total loss: 209.589360
+total_train_accuracy: tensor(0.6667, device='cuda:0')
+Training Epoch: 95, total loss: 211.007524
+total_train_accuracy: tensor(0.6687, device='cuda:0')
+Training Epoch: 96, total loss: 211.557624
+total_train_accuracy: tensor(0.6809, device='cuda:0')
+Training Epoch: 97, total loss: 210.582886
+total_train_accuracy: tensor(0.6748, device='cuda:0')
+Training Epoch: 98, total loss: 211.336689
+total_train_accuracy: tensor(0.6504, device='cuda:0')
+Training Epoch: 99, total loss: 212.216697
+total_train_accuracy: tensor(0.6789, device='cuda:0')
+Training Epoch: 100, total loss: 209.855863
+the  3  epoch ends
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+total_test_accuracy: tensor(0.8269, device='cuda:0')
+acc_test_each_k: tensor(0.8269, device='cuda:0')
+549 3301
+549 3301
+total_train_accuracy: tensor(0.6687, device='cuda:0')
+Training Epoch: 0, total loss: 210.965989
+total_train_accuracy: tensor(0.6890, device='cuda:0')
+Training Epoch: 1, total loss: 209.253885
+total_train_accuracy: tensor(0.6809, device='cuda:0')
+Training Epoch: 2, total loss: 209.130397
+total_train_accuracy: tensor(0.6667, device='cuda:0')
+Training Epoch: 3, total loss: 211.377381
+total_train_accuracy: tensor(0.6524, device='cuda:0')
+Training Epoch: 4, total loss: 212.619413
+total_train_accuracy: tensor(0.6402, device='cuda:0')
+Training Epoch: 5, total loss: 213.366944
+total_train_accuracy: tensor(0.6687, device='cuda:0')
+Training Epoch: 6, total loss: 211.077459
+total_train_accuracy: tensor(0.6850, device='cuda:0')
+Training Epoch: 7, total loss: 210.379962
+total_train_accuracy: tensor(0.7215, device='cuda:0')
+Training Epoch: 8, total loss: 206.463364
+total_train_accuracy: tensor(0.6626, device='cuda:0')
+Training Epoch: 9, total loss: 211.162827
+total_train_accuracy: tensor(0.6850, device='cuda:0')
+Training Epoch: 10, total loss: 209.404206
+total_train_accuracy: tensor(0.6768, device='cuda:0')
+Training Epoch: 11, total loss: 210.516692
+total_train_accuracy: tensor(0.6890, device='cuda:0')
+Training Epoch: 12, total loss: 209.932350
+total_train_accuracy: tensor(0.7033, device='cuda:0')
+Training Epoch: 13, total loss: 207.550920
+total_train_accuracy: tensor(0.7337, device='cuda:0')
+Training Epoch: 14, total loss: 205.565845
+total_train_accuracy: tensor(0.6707, device='cuda:0')
+Training Epoch: 15, total loss: 210.939342
+total_train_accuracy: tensor(0.6870, device='cuda:0')
+Training Epoch: 16, total loss: 210.671487
+total_train_accuracy: tensor(0.6890, device='cuda:0')
+Training Epoch: 17, total loss: 209.335784
+total_train_accuracy: tensor(0.6728, device='cuda:0')
+Training Epoch: 18, total loss: 209.946571
+total_train_accuracy: tensor(0.6890, device='cuda:0')
+Training Epoch: 19, total loss: 209.425119
+total_train_accuracy: tensor(0.7154, device='cuda:0')
+Training Epoch: 20, total loss: 207.058571
+total_train_accuracy: tensor(0.6870, device='cuda:0')
+Training Epoch: 21, total loss: 209.387053
+total_train_accuracy: tensor(0.7175, device='cuda:0')
+Training Epoch: 22, total loss: 205.866542
+total_train_accuracy: tensor(0.6585, device='cuda:0')
+Training Epoch: 23, total loss: 211.876359
+total_train_accuracy: tensor(0.7154, device='cuda:0')
+Training Epoch: 24, total loss: 206.628647
+total_train_accuracy: tensor(0.6667, device='cuda:0')
+Training Epoch: 25, total loss: 210.609807
+total_train_accuracy: tensor(0.7114, device='cuda:0')
+Training Epoch: 26, total loss: 206.191916
+total_train_accuracy: tensor(0.7012, device='cuda:0')
+Training Epoch: 27, total loss: 207.668856
+total_train_accuracy: tensor(0.6931, device='cuda:0')
+Training Epoch: 28, total loss: 209.095783
+total_train_accuracy: tensor(0.7033, device='cuda:0')
+Training Epoch: 29, total loss: 207.347942
+total_train_accuracy: tensor(0.7053, device='cuda:0')
+Training Epoch: 30, total loss: 208.049968
+total_train_accuracy: tensor(0.7012, device='cuda:0')
+Training Epoch: 31, total loss: 209.029832
+total_train_accuracy: tensor(0.6707, device='cuda:0')
+Training Epoch: 32, total loss: 210.757588
+total_train_accuracy: tensor(0.6443, device='cuda:0')
+Training Epoch: 33, total loss: 212.036401
+total_train_accuracy: tensor(0.6931, device='cuda:0')
+Training Epoch: 34, total loss: 208.530097
+total_train_accuracy: tensor(0.7073, device='cuda:0')
+Training Epoch: 35, total loss: 207.141973
+total_train_accuracy: tensor(0.6829, device='cuda:0')
+Training Epoch: 36, total loss: 209.364729
+total_train_accuracy: tensor(0.6951, device='cuda:0')
+Training Epoch: 37, total loss: 208.190033
+total_train_accuracy: tensor(0.6789, device='cuda:0')
+Training Epoch: 38, total loss: 210.808779
+total_train_accuracy: tensor(0.6646, device='cuda:0')
+Training Epoch: 39, total loss: 211.740789
+total_train_accuracy: tensor(0.6931, device='cuda:0')
+Training Epoch: 40, total loss: 209.620923
+total_train_accuracy: tensor(0.7175, device='cuda:0')
+Training Epoch: 41, total loss: 206.298630
+total_train_accuracy: tensor(0.6829, device='cuda:0')
+Training Epoch: 42, total loss: 209.578048
+total_train_accuracy: tensor(0.6992, device='cuda:0')
+Training Epoch: 43, total loss: 207.965636
+total_train_accuracy: tensor(0.7033, device='cuda:0')
+Training Epoch: 44, total loss: 206.056358
+total_train_accuracy: tensor(0.6931, device='cuda:0')
+Training Epoch: 45, total loss: 209.132962
+total_train_accuracy: tensor(0.7053, device='cuda:0')
+Training Epoch: 46, total loss: 207.713030
+total_train_accuracy: tensor(0.6972, device='cuda:0')
+Training Epoch: 47, total loss: 206.728257
+total_train_accuracy: tensor(0.6768, device='cuda:0')
+Training Epoch: 48, total loss: 210.368887
+total_train_accuracy: tensor(0.6972, device='cuda:0')
+Training Epoch: 49, total loss: 208.194260
+total_train_accuracy: tensor(0.6850, device='cuda:0')
+Training Epoch: 50, total loss: 210.647212
+total_train_accuracy: tensor(0.6707, device='cuda:0')
+Training Epoch: 51, total loss: 210.392293
+total_train_accuracy: tensor(0.6890, device='cuda:0')
+Training Epoch: 52, total loss: 208.412985
+total_train_accuracy: tensor(0.6870, device='cuda:0')
+Training Epoch: 53, total loss: 209.755249
+total_train_accuracy: tensor(0.6809, device='cuda:0')
+Training Epoch: 54, total loss: 209.250721
+total_train_accuracy: tensor(0.6829, device='cuda:0')
+Training Epoch: 55, total loss: 209.377535
+total_train_accuracy: tensor(0.6809, device='cuda:0')
+Training Epoch: 56, total loss: 209.082855
+total_train_accuracy: tensor(0.6707, device='cuda:0')
+Training Epoch: 57, total loss: 210.910363
+total_train_accuracy: tensor(0.6931, device='cuda:0')
+Training Epoch: 58, total loss: 208.641407
+total_train_accuracy: tensor(0.7297, device='cuda:0')
+Training Epoch: 59, total loss: 204.270372
+total_train_accuracy: tensor(0.7317, device='cuda:0')
+Training Epoch: 60, total loss: 204.775862
+total_train_accuracy: tensor(0.7114, device='cuda:0')
+Training Epoch: 61, total loss: 206.349715
+total_train_accuracy: tensor(0.7093, device='cuda:0')
+Training Epoch: 62, total loss: 206.785821
+total_train_accuracy: tensor(0.6992, device='cuda:0')
+Training Epoch: 63, total loss: 208.279079
+total_train_accuracy: tensor(0.6972, device='cuda:0')
+Training Epoch: 64, total loss: 207.635077
+total_train_accuracy: tensor(0.6931, device='cuda:0')
+Training Epoch: 65, total loss: 208.516656
+total_train_accuracy: tensor(0.6524, device='cuda:0')
+Training Epoch: 66, total loss: 211.645846
+total_train_accuracy: tensor(0.7114, device='cuda:0')
+Training Epoch: 67, total loss: 206.704650
+total_train_accuracy: tensor(0.6829, device='cuda:0')
+Training Epoch: 68, total loss: 208.826127
+total_train_accuracy: tensor(0.6789, device='cuda:0')
+Training Epoch: 69, total loss: 209.902249
+total_train_accuracy: tensor(0.6606, device='cuda:0')
+Training Epoch: 70, total loss: 211.762838
+total_train_accuracy: tensor(0.6931, device='cuda:0')
+Training Epoch: 71, total loss: 208.171854
+total_train_accuracy: tensor(0.6931, device='cuda:0')
+Training Epoch: 72, total loss: 208.589957
+total_train_accuracy: tensor(0.7012, device='cuda:0')
+Training Epoch: 73, total loss: 206.415458
+total_train_accuracy: tensor(0.7033, device='cuda:0')
+Training Epoch: 74, total loss: 208.275341
+total_train_accuracy: tensor(0.7033, device='cuda:0')
+Training Epoch: 75, total loss: 207.552830
+total_train_accuracy: tensor(0.6829, device='cuda:0')
+Training Epoch: 76, total loss: 208.907299
+total_train_accuracy: tensor(0.7093, device='cuda:0')
+Training Epoch: 77, total loss: 206.073510
+total_train_accuracy: tensor(0.6890, device='cuda:0')
+Training Epoch: 78, total loss: 208.413656
+total_train_accuracy: tensor(0.6972, device='cuda:0')
+Training Epoch: 79, total loss: 209.424423
+total_train_accuracy: tensor(0.7033, device='cuda:0')
+Training Epoch: 80, total loss: 206.072495
+total_train_accuracy: tensor(0.7033, device='cuda:0')
+Training Epoch: 81, total loss: 207.156914
+total_train_accuracy: tensor(0.6931, device='cuda:0')
+Training Epoch: 82, total loss: 207.581846
+total_train_accuracy: tensor(0.6850, device='cuda:0')
+Training Epoch: 83, total loss: 209.629758
+total_train_accuracy: tensor(0.6748, device='cuda:0')
+Training Epoch: 84, total loss: 210.188985
+total_train_accuracy: tensor(0.7053, device='cuda:0')
+Training Epoch: 85, total loss: 207.384102
+total_train_accuracy: tensor(0.6850, device='cuda:0')
+Training Epoch: 86, total loss: 208.578954
+total_train_accuracy: tensor(0.6768, device='cuda:0')
+Training Epoch: 87, total loss: 209.120862
+total_train_accuracy: tensor(0.6789, device='cuda:0')
+Training Epoch: 88, total loss: 210.150880
+total_train_accuracy: tensor(0.6890, device='cuda:0')
+Training Epoch: 89, total loss: 208.871668
+total_train_accuracy: tensor(0.7459, device='cuda:0')
+Training Epoch: 90, total loss: 203.376405
+total_train_accuracy: tensor(0.7053, device='cuda:0')
+Training Epoch: 91, total loss: 207.049446
+total_train_accuracy: tensor(0.7358, device='cuda:0')
+Training Epoch: 92, total loss: 204.518258
+total_train_accuracy: tensor(0.6890, device='cuda:0')
+Training Epoch: 93, total loss: 208.671994
+total_train_accuracy: tensor(0.6931, device='cuda:0')
+Training Epoch: 94, total loss: 207.061031
+total_train_accuracy: tensor(0.6951, device='cuda:0')
+Training Epoch: 95, total loss: 209.596689
+total_train_accuracy: tensor(0.7093, device='cuda:0')
+Training Epoch: 96, total loss: 205.950862
+total_train_accuracy: tensor(0.6870, device='cuda:0')
+Training Epoch: 97, total loss: 208.166076
+total_train_accuracy: tensor(0.7378, device='cuda:0')
+Training Epoch: 98, total loss: 203.105290
+total_train_accuracy: tensor(0.7134, device='cuda:0')
+Training Epoch: 99, total loss: 205.590541
+total_train_accuracy: tensor(0.6972, device='cuda:0')
+Training Epoch: 100, total loss: 207.812615
+the  4  epoch ends
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+total_test_accuracy: tensor(0.9038, device='cuda:0')
+acc_test_each_k: tensor(0.9038, device='cuda:0')
+549 3301
+549 3301
+total_train_accuracy: tensor(0.6687, device='cuda:0')
+Training Epoch: 0, total loss: 210.443204
+total_train_accuracy: tensor(0.6789, device='cuda:0')
+Training Epoch: 1, total loss: 209.903162
+total_train_accuracy: tensor(0.6911, device='cuda:0')
+Training Epoch: 2, total loss: 208.960790
+total_train_accuracy: tensor(0.6626, device='cuda:0')
+Training Epoch: 3, total loss: 210.767030
+total_train_accuracy: tensor(0.6768, device='cuda:0')
+Training Epoch: 4, total loss: 210.861913
+total_train_accuracy: tensor(0.6972, device='cuda:0')
+Training Epoch: 5, total loss: 208.667011
+total_train_accuracy: tensor(0.7033, device='cuda:0')
+Training Epoch: 6, total loss: 207.201117
+total_train_accuracy: tensor(0.7236, device='cuda:0')
+Training Epoch: 7, total loss: 205.080457
+total_train_accuracy: tensor(0.6748, device='cuda:0')
+Training Epoch: 8, total loss: 210.780782
+total_train_accuracy: tensor(0.6646, device='cuda:0')
+Training Epoch: 9, total loss: 211.575700
+total_train_accuracy: tensor(0.6911, device='cuda:0')
+Training Epoch: 10, total loss: 207.832720
+total_train_accuracy: tensor(0.6789, device='cuda:0')
+Training Epoch: 11, total loss: 209.777775
+total_train_accuracy: tensor(0.6524, device='cuda:0')
+Training Epoch: 12, total loss: 212.263992
+total_train_accuracy: tensor(0.6870, device='cuda:0')
+Training Epoch: 13, total loss: 209.797983
+total_train_accuracy: tensor(0.7134, device='cuda:0')
+Training Epoch: 14, total loss: 206.315951
+total_train_accuracy: tensor(0.6870, device='cuda:0')
+Training Epoch: 15, total loss: 210.014245
+total_train_accuracy: tensor(0.6911, device='cuda:0')
+Training Epoch: 16, total loss: 208.061095
+total_train_accuracy: tensor(0.6972, device='cuda:0')
+Training Epoch: 17, total loss: 208.601437
+total_train_accuracy: tensor(0.6870, device='cuda:0')
+Training Epoch: 18, total loss: 208.302363
+total_train_accuracy: tensor(0.6748, device='cuda:0')
+Training Epoch: 19, total loss: 210.329644
+total_train_accuracy: tensor(0.6931, device='cuda:0')
+Training Epoch: 20, total loss: 207.089449
+total_train_accuracy: tensor(0.7012, device='cuda:0')
+Training Epoch: 21, total loss: 207.316675
+total_train_accuracy: tensor(0.7033, device='cuda:0')
+Training Epoch: 22, total loss: 207.474925
+total_train_accuracy: tensor(0.6951, device='cuda:0')
+Training Epoch: 23, total loss: 208.667123
+total_train_accuracy: tensor(0.7195, device='cuda:0')
+Training Epoch: 24, total loss: 205.938257
+total_train_accuracy: tensor(0.6931, device='cuda:0')
+Training Epoch: 25, total loss: 208.555405
+total_train_accuracy: tensor(0.7134, device='cuda:0')
+Training Epoch: 26, total loss: 206.689305
+total_train_accuracy: tensor(0.7317, device='cuda:0')
+Training Epoch: 27, total loss: 204.412618
+total_train_accuracy: tensor(0.6748, device='cuda:0')
+Training Epoch: 28, total loss: 209.616929
+total_train_accuracy: tensor(0.6931, device='cuda:0')
+Training Epoch: 29, total loss: 208.502099
+total_train_accuracy: tensor(0.7012, device='cuda:0')
+Training Epoch: 30, total loss: 207.165456
+total_train_accuracy: tensor(0.6809, device='cuda:0')
+Training Epoch: 31, total loss: 209.235636
+total_train_accuracy: tensor(0.6951, device='cuda:0')
+Training Epoch: 32, total loss: 209.560298
+total_train_accuracy: tensor(0.7073, device='cuda:0')
+Training Epoch: 33, total loss: 207.010220
+total_train_accuracy: tensor(0.6850, device='cuda:0')
+Training Epoch: 34, total loss: 210.093773
+total_train_accuracy: tensor(0.6809, device='cuda:0')
+Training Epoch: 35, total loss: 209.559176
+total_train_accuracy: tensor(0.7175, device='cuda:0')
+Training Epoch: 36, total loss: 205.446436
+total_train_accuracy: tensor(0.7134, device='cuda:0')
+Training Epoch: 37, total loss: 205.543166
+total_train_accuracy: tensor(0.7073, device='cuda:0')
+Training Epoch: 38, total loss: 205.693476
+total_train_accuracy: tensor(0.6992, device='cuda:0')
+Training Epoch: 39, total loss: 207.434863
+total_train_accuracy: tensor(0.6931, device='cuda:0')
+Training Epoch: 40, total loss: 208.195273
+total_train_accuracy: tensor(0.7053, device='cuda:0')
+Training Epoch: 41, total loss: 206.471673
+total_train_accuracy: tensor(0.7093, device='cuda:0')
+Training Epoch: 42, total loss: 205.325655
+total_train_accuracy: tensor(0.6890, device='cuda:0')
+Training Epoch: 43, total loss: 208.667356
+total_train_accuracy: tensor(0.7093, device='cuda:0')
+Training Epoch: 44, total loss: 206.666049
+total_train_accuracy: tensor(0.7114, device='cuda:0')
+Training Epoch: 45, total loss: 206.155241
+total_train_accuracy: tensor(0.6728, device='cuda:0')
+Training Epoch: 46, total loss: 209.981610
+total_train_accuracy: tensor(0.6687, device='cuda:0')
+Training Epoch: 47, total loss: 209.975945
+total_train_accuracy: tensor(0.7053, device='cuda:0')
+Training Epoch: 48, total loss: 207.062555
+total_train_accuracy: tensor(0.6545, device='cuda:0')
+Training Epoch: 49, total loss: 211.956825
+total_train_accuracy: tensor(0.6951, device='cuda:0')
+Training Epoch: 50, total loss: 208.632164
+total_train_accuracy: tensor(0.6992, device='cuda:0')
+Training Epoch: 51, total loss: 207.599534
+total_train_accuracy: tensor(0.7073, device='cuda:0')
+Training Epoch: 52, total loss: 206.683112
+total_train_accuracy: tensor(0.6850, device='cuda:0')
+Training Epoch: 53, total loss: 208.962816
+total_train_accuracy: tensor(0.7093, device='cuda:0')
+Training Epoch: 54, total loss: 206.613671
+total_train_accuracy: tensor(0.7297, device='cuda:0')
+Training Epoch: 55, total loss: 205.302823
+total_train_accuracy: tensor(0.6728, device='cuda:0')
+Training Epoch: 56, total loss: 211.078630
+total_train_accuracy: tensor(0.7033, device='cuda:0')
+Training Epoch: 57, total loss: 207.432016
+total_train_accuracy: tensor(0.6870, device='cuda:0')
+Training Epoch: 58, total loss: 207.702261
+total_train_accuracy: tensor(0.7154, device='cuda:0')
+Training Epoch: 59, total loss: 206.606740
+total_train_accuracy: tensor(0.7093, device='cuda:0')
+Training Epoch: 60, total loss: 206.630760
+total_train_accuracy: tensor(0.6870, device='cuda:0')
+Training Epoch: 61, total loss: 209.376764
+total_train_accuracy: tensor(0.6992, device='cuda:0')
+Training Epoch: 62, total loss: 208.199108
+total_train_accuracy: tensor(0.7134, device='cuda:0')
+Training Epoch: 63, total loss: 205.536260
+total_train_accuracy: tensor(0.6809, device='cuda:0')
+Training Epoch: 64, total loss: 209.433695
+total_train_accuracy: tensor(0.6890, device='cuda:0')
+Training Epoch: 65, total loss: 208.368398
+total_train_accuracy: tensor(0.6911, device='cuda:0')
+Training Epoch: 66, total loss: 208.830572
+total_train_accuracy: tensor(0.6768, device='cuda:0')
+Training Epoch: 67, total loss: 209.154715
+total_train_accuracy: tensor(0.7398, device='cuda:0')
+Training Epoch: 68, total loss: 203.489831
+total_train_accuracy: tensor(0.7093, device='cuda:0')
+Training Epoch: 69, total loss: 206.589105
+total_train_accuracy: tensor(0.7012, device='cuda:0')
+Training Epoch: 70, total loss: 208.720968
+total_train_accuracy: tensor(0.7358, device='cuda:0')
+Training Epoch: 71, total loss: 204.831561
+total_train_accuracy: tensor(0.6972, device='cuda:0')
+Training Epoch: 72, total loss: 207.790044
+total_train_accuracy: tensor(0.6829, device='cuda:0')
+Training Epoch: 73, total loss: 208.612995
+total_train_accuracy: tensor(0.7256, device='cuda:0')
+Training Epoch: 74, total loss: 204.400377
+total_train_accuracy: tensor(0.6931, device='cuda:0')
+Training Epoch: 75, total loss: 207.614273
+total_train_accuracy: tensor(0.6992, device='cuda:0')
+Training Epoch: 76, total loss: 207.349210
+total_train_accuracy: tensor(0.7215, device='cuda:0')
+Training Epoch: 77, total loss: 205.206468
+total_train_accuracy: tensor(0.7033, device='cuda:0')
+Training Epoch: 78, total loss: 208.483723
+total_train_accuracy: tensor(0.6768, device='cuda:0')
+Training Epoch: 79, total loss: 209.504266
+total_train_accuracy: tensor(0.6890, device='cuda:0')
+Training Epoch: 80, total loss: 209.508878
+total_train_accuracy: tensor(0.6870, device='cuda:0')
+Training Epoch: 81, total loss: 208.481700
+total_train_accuracy: tensor(0.7154, device='cuda:0')
+Training Epoch: 82, total loss: 207.298208
+total_train_accuracy: tensor(0.6951, device='cuda:0')
+Training Epoch: 83, total loss: 208.650222
+total_train_accuracy: tensor(0.7195, device='cuda:0')
+Training Epoch: 84, total loss: 205.440865
+total_train_accuracy: tensor(0.6931, device='cuda:0')
+Training Epoch: 85, total loss: 209.058911
+total_train_accuracy: tensor(0.7134, device='cuda:0')
+Training Epoch: 86, total loss: 205.653884
+total_train_accuracy: tensor(0.6890, device='cuda:0')
+Training Epoch: 87, total loss: 209.076919
+total_train_accuracy: tensor(0.6707, device='cuda:0')
+Training Epoch: 88, total loss: 210.280730
+total_train_accuracy: tensor(0.7134, device='cuda:0')
+Training Epoch: 89, total loss: 205.618775
+total_train_accuracy: tensor(0.7033, device='cuda:0')
+Training Epoch: 90, total loss: 207.763733
+total_train_accuracy: tensor(0.7215, device='cuda:0')
+Training Epoch: 91, total loss: 205.072892
+total_train_accuracy: tensor(0.6951, device='cuda:0')
+Training Epoch: 92, total loss: 207.796517
+total_train_accuracy: tensor(0.7073, device='cuda:0')
+Training Epoch: 93, total loss: 208.439095
+total_train_accuracy: tensor(0.6809, device='cuda:0')
+Training Epoch: 94, total loss: 210.035864
+total_train_accuracy: tensor(0.7337, device='cuda:0')
+Training Epoch: 95, total loss: 202.999713
+total_train_accuracy: tensor(0.7053, device='cuda:0')
+Training Epoch: 96, total loss: 207.002628
+total_train_accuracy: tensor(0.7256, device='cuda:0')
+Training Epoch: 97, total loss: 204.347394
+total_train_accuracy: tensor(0.7236, device='cuda:0')
+Training Epoch: 98, total loss: 205.027644
+total_train_accuracy: tensor(0.6829, device='cuda:0')
+Training Epoch: 99, total loss: 209.391695
+total_train_accuracy: tensor(0.6768, device='cuda:0')
+Training Epoch: 100, total loss: 208.676851
+the  5  epoch ends
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+total_test_accuracy: tensor(0.9423, device='cuda:0')
+acc_test_each_k: tensor(0.9423, device='cuda:0')
+549 3301
+549 3301
+total_train_accuracy: tensor(0.6870, device='cuda:0')
+Training Epoch: 0, total loss: 208.114974
+total_train_accuracy: tensor(0.6829, device='cuda:0')
+Training Epoch: 1, total loss: 207.947070
+total_train_accuracy: tensor(0.7297, device='cuda:0')
+Training Epoch: 2, total loss: 205.172186
+total_train_accuracy: tensor(0.7012, device='cuda:0')
+Training Epoch: 3, total loss: 207.090811
+total_train_accuracy: tensor(0.7053, device='cuda:0')
+Training Epoch: 4, total loss: 206.800876
+total_train_accuracy: tensor(0.6748, device='cuda:0')
+Training Epoch: 5, total loss: 210.567764
+total_train_accuracy: tensor(0.6992, device='cuda:0')
+Training Epoch: 6, total loss: 208.463924
+total_train_accuracy: tensor(0.7012, device='cuda:0')
+Training Epoch: 7, total loss: 207.301821
+total_train_accuracy: tensor(0.6850, device='cuda:0')
+Training Epoch: 8, total loss: 208.883867
+total_train_accuracy: tensor(0.7053, device='cuda:0')
+Training Epoch: 9, total loss: 205.785957
+total_train_accuracy: tensor(0.7012, device='cuda:0')
+Training Epoch: 10, total loss: 205.478695
+total_train_accuracy: tensor(0.6992, device='cuda:0')
+Training Epoch: 11, total loss: 207.474455
+total_train_accuracy: tensor(0.7012, device='cuda:0')
+Training Epoch: 12, total loss: 206.966185
+total_train_accuracy: tensor(0.6748, device='cuda:0')
+Training Epoch: 13, total loss: 209.892485
+total_train_accuracy: tensor(0.7114, device='cuda:0')
+Training Epoch: 14, total loss: 205.837215
+total_train_accuracy: tensor(0.7053, device='cuda:0')
+Training Epoch: 15, total loss: 206.173857
+total_train_accuracy: tensor(0.7012, device='cuda:0')
+Training Epoch: 16, total loss: 207.227579
+total_train_accuracy: tensor(0.7033, device='cuda:0')
+Training Epoch: 17, total loss: 207.594074
+total_train_accuracy: tensor(0.6646, device='cuda:0')
+Training Epoch: 18, total loss: 211.437631
+total_train_accuracy: tensor(0.7358, device='cuda:0')
+Training Epoch: 19, total loss: 203.381870
+total_train_accuracy: tensor(0.7398, device='cuda:0')
+Training Epoch: 20, total loss: 203.301517
+total_train_accuracy: tensor(0.6809, device='cuda:0')
+Training Epoch: 21, total loss: 207.755509
+total_train_accuracy: tensor(0.7012, device='cuda:0')
+Training Epoch: 22, total loss: 206.728593
+total_train_accuracy: tensor(0.6972, device='cuda:0')
+Training Epoch: 23, total loss: 208.116892
+total_train_accuracy: tensor(0.6463, device='cuda:0')
+Training Epoch: 24, total loss: 212.748650
+total_train_accuracy: tensor(0.6809, device='cuda:0')
+Training Epoch: 25, total loss: 208.822135
+total_train_accuracy: tensor(0.6911, device='cuda:0')
+Training Epoch: 26, total loss: 208.739393
+total_train_accuracy: tensor(0.7033, device='cuda:0')
+Training Epoch: 27, total loss: 207.604487
+total_train_accuracy: tensor(0.6951, device='cuda:0')
+Training Epoch: 28, total loss: 208.602025
+total_train_accuracy: tensor(0.7256, device='cuda:0')
+Training Epoch: 29, total loss: 204.413296
+total_train_accuracy: tensor(0.6911, device='cuda:0')
+Training Epoch: 30, total loss: 208.465680
+total_train_accuracy: tensor(0.6931, device='cuda:0')
+Training Epoch: 31, total loss: 207.475474
+total_train_accuracy: tensor(0.6870, device='cuda:0')
+Training Epoch: 32, total loss: 208.625442
+total_train_accuracy: tensor(0.7093, device='cuda:0')
+Training Epoch: 33, total loss: 206.819425
+total_train_accuracy: tensor(0.7480, device='cuda:0')
+Training Epoch: 34, total loss: 202.530503
+total_train_accuracy: tensor(0.7073, device='cuda:0')
+Training Epoch: 35, total loss: 208.250273
+total_train_accuracy: tensor(0.7378, device='cuda:0')
+Training Epoch: 36, total loss: 203.526220
+total_train_accuracy: tensor(0.6951, device='cuda:0')
+Training Epoch: 37, total loss: 206.806462
+total_train_accuracy: tensor(0.7053, device='cuda:0')
+Training Epoch: 38, total loss: 206.164730
+total_train_accuracy: tensor(0.6992, device='cuda:0')
+Training Epoch: 39, total loss: 206.587567
+total_train_accuracy: tensor(0.7195, device='cuda:0')
+Training Epoch: 40, total loss: 206.197535
+total_train_accuracy: tensor(0.7398, device='cuda:0')
+Training Epoch: 41, total loss: 203.386956
+total_train_accuracy: tensor(0.7195, device='cuda:0')
+Training Epoch: 42, total loss: 205.351490
+total_train_accuracy: tensor(0.7093, device='cuda:0')
+Training Epoch: 43, total loss: 206.277818
+total_train_accuracy: tensor(0.7012, device='cuda:0')
+Training Epoch: 44, total loss: 206.478128
+total_train_accuracy: tensor(0.7236, device='cuda:0')
+Training Epoch: 45, total loss: 206.423326
+total_train_accuracy: tensor(0.6789, device='cuda:0')
+Training Epoch: 46, total loss: 209.061717
+total_train_accuracy: tensor(0.6687, device='cuda:0')
+Training Epoch: 47, total loss: 209.071938
+total_train_accuracy: tensor(0.6931, device='cuda:0')
+Training Epoch: 48, total loss: 207.815910
+total_train_accuracy: tensor(0.6667, device='cuda:0')
+Training Epoch: 49, total loss: 210.657007
+total_train_accuracy: tensor(0.7256, device='cuda:0')
+Training Epoch: 50, total loss: 206.111312
+total_train_accuracy: tensor(0.7093, device='cuda:0')
+Training Epoch: 51, total loss: 207.404341
+total_train_accuracy: tensor(0.6972, device='cuda:0')
+Training Epoch: 52, total loss: 207.744618
+total_train_accuracy: tensor(0.6951, device='cuda:0')
+Training Epoch: 53, total loss: 207.148417
+total_train_accuracy: tensor(0.7236, device='cuda:0')
+Training Epoch: 54, total loss: 205.444832
+total_train_accuracy: tensor(0.7073, device='cuda:0')
+Training Epoch: 55, total loss: 205.949596
+total_train_accuracy: tensor(0.6992, device='cuda:0')
+Training Epoch: 56, total loss: 205.382846
+total_train_accuracy: tensor(0.7256, device='cuda:0')
+Training Epoch: 57, total loss: 204.660631
+total_train_accuracy: tensor(0.7175, device='cuda:0')
+Training Epoch: 58, total loss: 206.872929
+total_train_accuracy: tensor(0.7012, device='cuda:0')
+Training Epoch: 59, total loss: 206.478770
+total_train_accuracy: tensor(0.6850, device='cuda:0')
+Training Epoch: 60, total loss: 207.777904
+total_train_accuracy: tensor(0.6931, device='cuda:0')
+Training Epoch: 61, total loss: 208.551366
+total_train_accuracy: tensor(0.7012, device='cuda:0')
+Training Epoch: 62, total loss: 208.035793
+total_train_accuracy: tensor(0.6829, device='cuda:0')
+Training Epoch: 63, total loss: 208.272264
+total_train_accuracy: tensor(0.7459, device='cuda:0')
+Training Epoch: 64, total loss: 202.165316
+total_train_accuracy: tensor(0.7276, device='cuda:0')
+Training Epoch: 65, total loss: 204.294108
+total_train_accuracy: tensor(0.7378, device='cuda:0')
+Training Epoch: 66, total loss: 204.574531
+total_train_accuracy: tensor(0.6931, device='cuda:0')
+Training Epoch: 67, total loss: 208.179336
+total_train_accuracy: tensor(0.7033, device='cuda:0')
+Training Epoch: 68, total loss: 207.403724
+total_train_accuracy: tensor(0.6911, device='cuda:0')
+Training Epoch: 69, total loss: 208.843406
+total_train_accuracy: tensor(0.7215, device='cuda:0')
+Training Epoch: 70, total loss: 205.175025
+total_train_accuracy: tensor(0.7541, device='cuda:0')
+Training Epoch: 71, total loss: 201.736681
+total_train_accuracy: tensor(0.7134, device='cuda:0')
+Training Epoch: 72, total loss: 206.626161
+total_train_accuracy: tensor(0.6789, device='cuda:0')
+Training Epoch: 73, total loss: 209.408707
+total_train_accuracy: tensor(0.6850, device='cuda:0')
+Training Epoch: 74, total loss: 208.491764
+total_train_accuracy: tensor(0.6911, device='cuda:0')
+Training Epoch: 75, total loss: 207.377497
+total_train_accuracy: tensor(0.6951, device='cuda:0')
+Training Epoch: 76, total loss: 207.279386
+total_train_accuracy: tensor(0.7337, device='cuda:0')
+Training Epoch: 77, total loss: 205.014917
+total_train_accuracy: tensor(0.7033, device='cuda:0')
+Training Epoch: 78, total loss: 207.601396
+total_train_accuracy: tensor(0.6890, device='cuda:0')
+Training Epoch: 79, total loss: 208.842870
+total_train_accuracy: tensor(0.7114, device='cuda:0')
+Training Epoch: 80, total loss: 205.881755
+total_train_accuracy: tensor(0.6748, device='cuda:0')
+Training Epoch: 81, total loss: 209.906665
+total_train_accuracy: tensor(0.7236, device='cuda:0')
+Training Epoch: 82, total loss: 204.139113
+total_train_accuracy: tensor(0.7114, device='cuda:0')
+Training Epoch: 83, total loss: 206.611611
+total_train_accuracy: tensor(0.7114, device='cuda:0')
+Training Epoch: 84, total loss: 205.750218
+total_train_accuracy: tensor(0.7053, device='cuda:0')
+Training Epoch: 85, total loss: 206.164564
+total_train_accuracy: tensor(0.7358, device='cuda:0')
+Training Epoch: 86, total loss: 203.639017
+total_train_accuracy: tensor(0.7114, device='cuda:0')
+Training Epoch: 87, total loss: 206.281708
+total_train_accuracy: tensor(0.7358, device='cuda:0')
+Training Epoch: 88, total loss: 202.937667
+total_train_accuracy: tensor(0.7215, device='cuda:0')
+Training Epoch: 89, total loss: 205.300932
+total_train_accuracy: tensor(0.6870, device='cuda:0')
+Training Epoch: 90, total loss: 207.899186
+total_train_accuracy: tensor(0.7154, device='cuda:0')
+Training Epoch: 91, total loss: 207.207420
+total_train_accuracy: tensor(0.7236, device='cuda:0')
+Training Epoch: 92, total loss: 205.461436
+total_train_accuracy: tensor(0.7297, device='cuda:0')
+Training Epoch: 93, total loss: 204.678152
+total_train_accuracy: tensor(0.6789, device='cuda:0')
+Training Epoch: 94, total loss: 207.481466
+total_train_accuracy: tensor(0.7297, device='cuda:0')
+Training Epoch: 95, total loss: 203.715246
+total_train_accuracy: tensor(0.7378, device='cuda:0')
+Training Epoch: 96, total loss: 204.078578
+total_train_accuracy: tensor(0.7317, device='cuda:0')
+Training Epoch: 97, total loss: 203.272325
+total_train_accuracy: tensor(0.7337, device='cuda:0')
+Training Epoch: 98, total loss: 204.254790
+total_train_accuracy: tensor(0.7134, device='cuda:0')
+Training Epoch: 99, total loss: 205.865473
+total_train_accuracy: tensor(0.7459, device='cuda:0')
+Training Epoch: 100, total loss: 202.118565
+the  6  epoch ends
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+total_test_accuracy: tensor(0.9615, device='cuda:0')
+acc_test_each_k: tensor(0.9615, device='cuda:0')
+549 3301
+549 3301
+total_train_accuracy: tensor(0.6829, device='cuda:0')
+Training Epoch: 0, total loss: 209.623099
+total_train_accuracy: tensor(0.6992, device='cuda:0')
+Training Epoch: 1, total loss: 207.396506
+total_train_accuracy: tensor(0.7175, device='cuda:0')
+Training Epoch: 2, total loss: 205.662218
+total_train_accuracy: tensor(0.7012, device='cuda:0')
+Training Epoch: 3, total loss: 206.236013
+total_train_accuracy: tensor(0.7175, device='cuda:0')
+Training Epoch: 4, total loss: 205.523451
+total_train_accuracy: tensor(0.7134, device='cuda:0')
+Training Epoch: 5, total loss: 206.302965
+total_train_accuracy: tensor(0.7073, device='cuda:0')
+Training Epoch: 6, total loss: 206.460344
+total_train_accuracy: tensor(0.7093, device='cuda:0')
+Training Epoch: 7, total loss: 206.847556
+total_train_accuracy: tensor(0.7114, device='cuda:0')
+Training Epoch: 8, total loss: 206.435078
+total_train_accuracy: tensor(0.7581, device='cuda:0')
+Training Epoch: 9, total loss: 201.344384
+total_train_accuracy: tensor(0.7236, device='cuda:0')
+Training Epoch: 10, total loss: 204.348247
+total_train_accuracy: tensor(0.7073, device='cuda:0')
+Training Epoch: 11, total loss: 205.386883
+total_train_accuracy: tensor(0.7236, device='cuda:0')
+Training Epoch: 12, total loss: 205.461635
+total_train_accuracy: tensor(0.7459, device='cuda:0')
+Training Epoch: 13, total loss: 202.816255
+total_train_accuracy: tensor(0.6992, device='cuda:0')
+Training Epoch: 14, total loss: 206.485357
+total_train_accuracy: tensor(0.7195, device='cuda:0')
+Training Epoch: 15, total loss: 204.501305
+total_train_accuracy: tensor(0.7073, device='cuda:0')
+Training Epoch: 16, total loss: 206.506810
+total_train_accuracy: tensor(0.7175, device='cuda:0')
+Training Epoch: 17, total loss: 205.573503
+total_train_accuracy: tensor(0.7012, device='cuda:0')
+Training Epoch: 18, total loss: 206.516137
+total_train_accuracy: tensor(0.7053, device='cuda:0')
+Training Epoch: 19, total loss: 206.432748
+total_train_accuracy: tensor(0.7195, device='cuda:0')
+Training Epoch: 20, total loss: 206.676621
+total_train_accuracy: tensor(0.6992, device='cuda:0')
+Training Epoch: 21, total loss: 206.765901
+total_train_accuracy: tensor(0.6829, device='cuda:0')
+Training Epoch: 22, total loss: 209.391226
+total_train_accuracy: tensor(0.7073, device='cuda:0')
+Training Epoch: 23, total loss: 206.282842
+total_train_accuracy: tensor(0.6829, device='cuda:0')
+Training Epoch: 24, total loss: 208.685576
+total_train_accuracy: tensor(0.6890, device='cuda:0')
+Training Epoch: 25, total loss: 208.885413
+total_train_accuracy: tensor(0.6870, device='cuda:0')
+Training Epoch: 26, total loss: 208.704796
+total_train_accuracy: tensor(0.7195, device='cuda:0')
+Training Epoch: 27, total loss: 204.656267
+total_train_accuracy: tensor(0.6870, device='cuda:0')
+Training Epoch: 28, total loss: 209.555498
+total_train_accuracy: tensor(0.7276, device='cuda:0')
+Training Epoch: 29, total loss: 205.276154
+total_train_accuracy: tensor(0.7134, device='cuda:0')
+Training Epoch: 30, total loss: 205.519616
+total_train_accuracy: tensor(0.7317, device='cuda:0')
+Training Epoch: 31, total loss: 203.482988
+total_train_accuracy: tensor(0.7398, device='cuda:0')
+Training Epoch: 32, total loss: 203.822014
+total_train_accuracy: tensor(0.6850, device='cuda:0')
+Training Epoch: 33, total loss: 208.365597
+total_train_accuracy: tensor(0.7195, device='cuda:0')
+Training Epoch: 34, total loss: 205.315872
+total_train_accuracy: tensor(0.6931, device='cuda:0')
+Training Epoch: 35, total loss: 206.113783
+total_train_accuracy: tensor(0.6951, device='cuda:0')
+Training Epoch: 36, total loss: 208.825594
+total_train_accuracy: tensor(0.7012, device='cuda:0')
+Training Epoch: 37, total loss: 206.871696
+total_train_accuracy: tensor(0.7175, device='cuda:0')
+Training Epoch: 38, total loss: 205.933190
+total_train_accuracy: tensor(0.7134, device='cuda:0')
+Training Epoch: 39, total loss: 206.496977
+total_train_accuracy: tensor(0.7276, device='cuda:0')
+Training Epoch: 40, total loss: 204.624485
+total_train_accuracy: tensor(0.6870, device='cuda:0')
+Training Epoch: 41, total loss: 207.741787
+total_train_accuracy: tensor(0.6850, device='cuda:0')
+Training Epoch: 42, total loss: 208.929228
+total_train_accuracy: tensor(0.7154, device='cuda:0')
+Training Epoch: 43, total loss: 205.709612
+total_train_accuracy: tensor(0.7073, device='cuda:0')
+Training Epoch: 44, total loss: 208.280323
+total_train_accuracy: tensor(0.7195, device='cuda:0')
+Training Epoch: 45, total loss: 205.426586
+total_train_accuracy: tensor(0.7033, device='cuda:0')
+Training Epoch: 46, total loss: 206.341506
+total_train_accuracy: tensor(0.7317, device='cuda:0')
+Training Epoch: 47, total loss: 203.656827
+total_train_accuracy: tensor(0.7012, device='cuda:0')
+Training Epoch: 48, total loss: 206.700082
+total_train_accuracy: tensor(0.7378, device='cuda:0')
+Training Epoch: 49, total loss: 203.017138
+total_train_accuracy: tensor(0.7358, device='cuda:0')
+Training Epoch: 50, total loss: 203.568813
+total_train_accuracy: tensor(0.7175, device='cuda:0')
+Training Epoch: 51, total loss: 205.261611
+total_train_accuracy: tensor(0.7073, device='cuda:0')
+Training Epoch: 52, total loss: 205.676328
+total_train_accuracy: tensor(0.7175, device='cuda:0')
+Training Epoch: 53, total loss: 206.669805
+total_train_accuracy: tensor(0.6951, device='cuda:0')
+Training Epoch: 54, total loss: 207.747406
+total_train_accuracy: tensor(0.6768, device='cuda:0')
+Training Epoch: 55, total loss: 209.125743
+total_train_accuracy: tensor(0.7093, device='cuda:0')
+Training Epoch: 56, total loss: 206.446194
+total_train_accuracy: tensor(0.7053, device='cuda:0')
+Training Epoch: 57, total loss: 206.737039
+total_train_accuracy: tensor(0.7358, device='cuda:0')
+Training Epoch: 58, total loss: 203.015758
+total_train_accuracy: tensor(0.7033, device='cuda:0')
+Training Epoch: 59, total loss: 207.217934
+total_train_accuracy: tensor(0.7073, device='cuda:0')
+Training Epoch: 60, total loss: 205.839111
+total_train_accuracy: tensor(0.7297, device='cuda:0')
+Training Epoch: 61, total loss: 203.991125
+total_train_accuracy: tensor(0.7236, device='cuda:0')
+Training Epoch: 62, total loss: 204.419802
+total_train_accuracy: tensor(0.7276, device='cuda:0')
+Training Epoch: 63, total loss: 204.020447
+total_train_accuracy: tensor(0.7317, device='cuda:0')
+Training Epoch: 64, total loss: 204.124034
+total_train_accuracy: tensor(0.7195, device='cuda:0')
+Training Epoch: 65, total loss: 205.471710
+total_train_accuracy: tensor(0.7154, device='cuda:0')
+Training Epoch: 66, total loss: 205.632355
+total_train_accuracy: tensor(0.7012, device='cuda:0')
+Training Epoch: 67, total loss: 206.469766
+total_train_accuracy: tensor(0.7236, device='cuda:0')
+Training Epoch: 68, total loss: 205.171158
+total_train_accuracy: tensor(0.6972, device='cuda:0')
+Training Epoch: 69, total loss: 206.327027
+total_train_accuracy: tensor(0.7093, device='cuda:0')
+Training Epoch: 70, total loss: 206.223750
+total_train_accuracy: tensor(0.7256, device='cuda:0')
+Training Epoch: 71, total loss: 204.503612
+total_train_accuracy: tensor(0.7093, device='cuda:0')
+Training Epoch: 72, total loss: 206.572637
+total_train_accuracy: tensor(0.7093, device='cuda:0')
+Training Epoch: 73, total loss: 207.073315
+total_train_accuracy: tensor(0.6951, device='cuda:0')
+Training Epoch: 74, total loss: 207.135643
+total_train_accuracy: tensor(0.7236, device='cuda:0')
+Training Epoch: 75, total loss: 204.977098
+total_train_accuracy: tensor(0.7012, device='cuda:0')
+Training Epoch: 76, total loss: 208.679387
+total_train_accuracy: tensor(0.7236, device='cuda:0')
+Training Epoch: 77, total loss: 204.931087
+total_train_accuracy: tensor(0.7297, device='cuda:0')
+Training Epoch: 78, total loss: 203.942653
+total_train_accuracy: tensor(0.7236, device='cuda:0')
+Training Epoch: 79, total loss: 203.421792
+total_train_accuracy: tensor(0.7236, device='cuda:0')
+Training Epoch: 80, total loss: 204.552285
+total_train_accuracy: tensor(0.7520, device='cuda:0')
+Training Epoch: 81, total loss: 201.356934
+total_train_accuracy: tensor(0.6972, device='cuda:0')
+Training Epoch: 82, total loss: 208.014888
+total_train_accuracy: tensor(0.7581, device='cuda:0')
+Training Epoch: 83, total loss: 201.437431
+total_train_accuracy: tensor(0.6911, device='cuda:0')
+Training Epoch: 84, total loss: 208.199161
+total_train_accuracy: tensor(0.7175, device='cuda:0')
+ConvAttMLP_new.py:970: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  x=torch.tensor(x,dtype=torch.float)
+ConvAttMLP_new.py:971: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  labels=torch.tensor(labels,dtype=torch.float)
+ConvAttMLP_new.py:1022: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  inputs=torch.tensor(inputs ,dtype=torch.float)
+ConvAttMLP_new.py:1023: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  targets=torch.tensor(targets ,dtype=torch.float)
+ConvAttMLP_new.py:970: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  x=torch.tensor(x,dtype=torch.float)
+ConvAttMLP_new.py:971: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  labels=torch.tensor(labels,dtype=torch.float)
+ConvAttMLP_new.py:1022: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  inputs=torch.tensor(inputs ,dtype=torch.float)
+ConvAttMLP_new.py:1023: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  targets=torch.tensor(targets ,dtype=torch.float)
+ConvAttMLP_new.py:970: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  x=torch.tensor(x,dtype=torch.float)
+ConvAttMLP_new.py:971: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  labels=torch.tensor(labels,dtype=torch.float)
+ConvAttMLP_new.py:1022: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  inputs=torch.tensor(inputs ,dtype=torch.float)
+ConvAttMLP_new.py:1023: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  targets=torch.tensor(targets ,dtype=torch.float)
+ConvAttMLP_new.py:970: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  x=torch.tensor(x,dtype=torch.float)
+ConvAttMLP_new.py:971: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  labels=torch.tensor(labels,dtype=torch.float)
+ConvAttMLP_new.py:1022: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  inputs=torch.tensor(inputs ,dtype=torch.float)
+ConvAttMLP_new.py:1023: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  targets=torch.tensor(targets ,dtype=torch.float)
+ConvAttMLP_new.py:970: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  x=torch.tensor(x,dtype=torch.float)
+ConvAttMLP_new.py:971: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  labels=torch.tensor(labels,dtype=torch.float)
+ConvAttMLP_new.py:1022: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  inputs=torch.tensor(inputs ,dtype=torch.float)
+ConvAttMLP_new.py:1023: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  targets=torch.tensor(targets ,dtype=torch.float)
+ConvAttMLP_new.py:970: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  x=torch.tensor(x,dtype=torch.float)
+ConvAttMLP_new.py:971: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  labels=torch.tensor(labels,dtype=torch.float)
+ConvAttMLP_new.py:1022: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  inputs=torch.tensor(inputs ,dtype=torch.float)
+ConvAttMLP_new.py:1023: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  targets=torch.tensor(targets ,dtype=torch.float)
+ConvAttMLP_new.py:970: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  x=torch.tensor(x,dtype=torch.float)
+ConvAttMLP_new.py:971: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  labels=torch.tensor(labels,dtype=torch.float)
+ConvAttMLP_new.py:1022: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  inputs=torch.tensor(inputs ,dtype=torch.float)
+ConvAttMLP_new.py:1023: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  targets=torch.tensor(targets ,dtype=torch.float)
+ConvAttMLP_new.py:970: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  x=torch.tensor(x,dtype=torch.float)
+ConvAttMLP_new.py:971: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  labels=torch.tensor(labels,dtype=torch.float)
+Training Epoch: 85, total loss: 204.211371
+total_train_accuracy: tensor(0.7276, device='cuda:0')
+Training Epoch: 86, total loss: 204.882358
+total_train_accuracy: tensor(0.7195, device='cuda:0')
+Training Epoch: 87, total loss: 204.727926
+total_train_accuracy: tensor(0.7581, device='cuda:0')
+Training Epoch: 88, total loss: 200.247612
+total_train_accuracy: tensor(0.7317, device='cuda:0')
+Training Epoch: 89, total loss: 203.632488
+total_train_accuracy: tensor(0.6992, device='cuda:0')
+Training Epoch: 90, total loss: 206.299549
+total_train_accuracy: tensor(0.6789, device='cuda:0')
+Training Epoch: 91, total loss: 210.021997
+total_train_accuracy: tensor(0.7317, device='cuda:0')
+Training Epoch: 92, total loss: 204.993459
+total_train_accuracy: tensor(0.6829, device='cuda:0')
+Training Epoch: 93, total loss: 209.188060
+total_train_accuracy: tensor(0.7053, device='cuda:0')
+Training Epoch: 94, total loss: 206.706690
+total_train_accuracy: tensor(0.7317, device='cuda:0')
+Training Epoch: 95, total loss: 204.700537
+total_train_accuracy: tensor(0.7256, device='cuda:0')
+Training Epoch: 96, total loss: 203.847594
+total_train_accuracy: tensor(0.7114, device='cuda:0')
+Training Epoch: 97, total loss: 204.469159
+total_train_accuracy: tensor(0.7175, device='cuda:0')
+Training Epoch: 98, total loss: 205.514703
+total_train_accuracy: tensor(0.7337, device='cuda:0')
+Training Epoch: 99, total loss: 203.288952
+total_train_accuracy: tensor(0.7033, device='cuda:0')
+Training Epoch: 100, total loss: 207.563825
+the  7  epoch ends
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+total_test_accuracy: tensor(0.9038, device='cuda:0')
+acc_test_each_k: tensor(0.9038, device='cuda:0')
+549 3301
+549 3301
+total_train_accuracy: tensor(0.6951, device='cuda:0')
+Training Epoch: 0, total loss: 206.075956
+total_train_accuracy: tensor(0.6951, device='cuda:0')
+Training Epoch: 1, total loss: 207.256116
+total_train_accuracy: tensor(0.7012, device='cuda:0')
+Training Epoch: 2, total loss: 208.449427
+total_train_accuracy: tensor(0.7053, device='cuda:0')
+Training Epoch: 3, total loss: 206.157738
+total_train_accuracy: tensor(0.7154, device='cuda:0')
+Training Epoch: 4, total loss: 206.957581
+total_train_accuracy: tensor(0.7093, device='cuda:0')
+Training Epoch: 5, total loss: 206.533776
+total_train_accuracy: tensor(0.7012, device='cuda:0')
+Training Epoch: 6, total loss: 207.033995
+total_train_accuracy: tensor(0.7215, device='cuda:0')
+Training Epoch: 7, total loss: 205.614339
+total_train_accuracy: tensor(0.7114, device='cuda:0')
+Training Epoch: 8, total loss: 206.097935
+total_train_accuracy: tensor(0.6951, device='cuda:0')
+Training Epoch: 9, total loss: 206.767772
+total_train_accuracy: tensor(0.6768, device='cuda:0')
+Training Epoch: 10, total loss: 210.276482
+total_train_accuracy: tensor(0.7093, device='cuda:0')
+Training Epoch: 11, total loss: 206.350008
+total_train_accuracy: tensor(0.7175, device='cuda:0')
+Training Epoch: 12, total loss: 205.789473
+total_train_accuracy: tensor(0.7073, device='cuda:0')
+Training Epoch: 13, total loss: 206.195302
+total_train_accuracy: tensor(0.6992, device='cuda:0')
+Training Epoch: 14, total loss: 207.168212
+total_train_accuracy: tensor(0.6911, device='cuda:0')
+Training Epoch: 15, total loss: 208.223143
+total_train_accuracy: tensor(0.6829, device='cuda:0')
+Training Epoch: 16, total loss: 209.488319
+total_train_accuracy: tensor(0.7033, device='cuda:0')
+Training Epoch: 17, total loss: 206.006045
+total_train_accuracy: tensor(0.6789, device='cuda:0')
+Training Epoch: 18, total loss: 209.691888
+total_train_accuracy: tensor(0.7175, device='cuda:0')
+Training Epoch: 19, total loss: 205.738444
+total_train_accuracy: tensor(0.7398, device='cuda:0')
+Training Epoch: 20, total loss: 203.317412
+total_train_accuracy: tensor(0.7114, device='cuda:0')
+Training Epoch: 21, total loss: 205.490056
+total_train_accuracy: tensor(0.7215, device='cuda:0')
+Training Epoch: 22, total loss: 205.134438
+total_train_accuracy: tensor(0.6951, device='cuda:0')
+Training Epoch: 23, total loss: 208.264065
+total_train_accuracy: tensor(0.7093, device='cuda:0')
+Training Epoch: 24, total loss: 205.873124
+total_train_accuracy: tensor(0.7012, device='cuda:0')
+Training Epoch: 25, total loss: 206.984160
+total_train_accuracy: tensor(0.7358, device='cuda:0')
+Training Epoch: 26, total loss: 202.971758
+total_train_accuracy: tensor(0.7154, device='cuda:0')
+Training Epoch: 27, total loss: 204.849498
+total_train_accuracy: tensor(0.7012, device='cuda:0')
+Training Epoch: 28, total loss: 206.467595
+total_train_accuracy: tensor(0.6870, device='cuda:0')
+Training Epoch: 29, total loss: 209.134030
+total_train_accuracy: tensor(0.7114, device='cuda:0')
+Training Epoch: 30, total loss: 206.765928
+total_train_accuracy: tensor(0.7012, device='cuda:0')
+Training Epoch: 31, total loss: 207.463213
+total_train_accuracy: tensor(0.7134, device='cuda:0')
+Training Epoch: 32, total loss: 204.756005
+total_train_accuracy: tensor(0.7033, device='cuda:0')
+Training Epoch: 33, total loss: 206.035026
+total_train_accuracy: tensor(0.7154, device='cuda:0')
+Training Epoch: 34, total loss: 206.028575
+total_train_accuracy: tensor(0.7724, device='cuda:0')
+Training Epoch: 35, total loss: 200.250649
+total_train_accuracy: tensor(0.6911, device='cuda:0')
+Training Epoch: 36, total loss: 208.005636
+total_train_accuracy: tensor(0.7053, device='cuda:0')
+Training Epoch: 37, total loss: 205.788494
+total_train_accuracy: tensor(0.7297, device='cuda:0')
+Training Epoch: 38, total loss: 204.676559
+total_train_accuracy: tensor(0.7033, device='cuda:0')
+Training Epoch: 39, total loss: 206.593346
+total_train_accuracy: tensor(0.7012, device='cuda:0')
+Training Epoch: 40, total loss: 207.295472
+total_train_accuracy: tensor(0.6951, device='cuda:0')
+Training Epoch: 41, total loss: 206.467088
+total_train_accuracy: tensor(0.7276, device='cuda:0')
+Training Epoch: 42, total loss: 204.149201
+total_train_accuracy: tensor(0.6890, device='cuda:0')
+Training Epoch: 43, total loss: 208.744071
+total_train_accuracy: tensor(0.7073, device='cuda:0')
+Training Epoch: 44, total loss: 206.424710
+total_train_accuracy: tensor(0.6850, device='cuda:0')
+Training Epoch: 45, total loss: 207.691840
+total_train_accuracy: tensor(0.7175, device='cuda:0')
+Training Epoch: 46, total loss: 205.154751
+total_train_accuracy: tensor(0.7154, device='cuda:0')
+Training Epoch: 47, total loss: 206.177077
+total_train_accuracy: tensor(0.6829, device='cuda:0')
+Training Epoch: 48, total loss: 208.535860
+total_train_accuracy: tensor(0.6992, device='cuda:0')
+Training Epoch: 49, total loss: 208.653582
+total_train_accuracy: tensor(0.7337, device='cuda:0')
+Training Epoch: 50, total loss: 203.933688
+total_train_accuracy: tensor(0.6850, device='cuda:0')
+Training Epoch: 51, total loss: 208.361773
+total_train_accuracy: tensor(0.7317, device='cuda:0')
+Training Epoch: 52, total loss: 203.409067
+total_train_accuracy: tensor(0.7439, device='cuda:0')
+Training Epoch: 53, total loss: 203.668974
+total_train_accuracy: tensor(0.7236, device='cuda:0')
+Training Epoch: 54, total loss: 205.423468
+total_train_accuracy: tensor(0.7073, device='cuda:0')
+Training Epoch: 55, total loss: 206.219836
+total_train_accuracy: tensor(0.7663, device='cuda:0')
+Training Epoch: 56, total loss: 200.117009
+total_train_accuracy: tensor(0.7114, device='cuda:0')
+Training Epoch: 57, total loss: 206.145574
+total_train_accuracy: tensor(0.7541, device='cuda:0')
+Training Epoch: 58, total loss: 200.673834
+total_train_accuracy: tensor(0.7093, device='cuda:0')
+Training Epoch: 59, total loss: 206.065071
+total_train_accuracy: tensor(0.6890, device='cuda:0')
+Training Epoch: 60, total loss: 208.427760
+total_train_accuracy: tensor(0.7012, device='cuda:0')
+Training Epoch: 61, total loss: 207.026692
+total_train_accuracy: tensor(0.7175, device='cuda:0')
+Training Epoch: 62, total loss: 204.908813
+total_train_accuracy: tensor(0.7439, device='cuda:0')
+Training Epoch: 63, total loss: 203.067830
+total_train_accuracy: tensor(0.6931, device='cuda:0')
+Training Epoch: 64, total loss: 207.658269
+total_train_accuracy: tensor(0.7622, device='cuda:0')
+Training Epoch: 65, total loss: 200.602497
+total_train_accuracy: tensor(0.7297, device='cuda:0')
+Training Epoch: 66, total loss: 204.350594
+total_train_accuracy: tensor(0.7012, device='cuda:0')
+Training Epoch: 67, total loss: 207.446658
+total_train_accuracy: tensor(0.7276, device='cuda:0')
+Training Epoch: 68, total loss: 205.294094
+total_train_accuracy: tensor(0.6850, device='cuda:0')
+Training Epoch: 69, total loss: 209.040158
+total_train_accuracy: tensor(0.7012, device='cuda:0')
+Training Epoch: 70, total loss: 206.752920
+total_train_accuracy: tensor(0.7073, device='cuda:0')
+Training Epoch: 71, total loss: 206.812991
+total_train_accuracy: tensor(0.6992, device='cuda:0')
+Training Epoch: 72, total loss: 206.620065
+total_train_accuracy: tensor(0.7093, device='cuda:0')
+Training Epoch: 73, total loss: 205.779223
+total_train_accuracy: tensor(0.6890, device='cuda:0')
+Training Epoch: 74, total loss: 208.205755
+total_train_accuracy: tensor(0.6870, device='cuda:0')
+Training Epoch: 75, total loss: 207.848342
+total_train_accuracy: tensor(0.7256, device='cuda:0')
+Training Epoch: 76, total loss: 204.470531
+total_train_accuracy: tensor(0.6789, device='cuda:0')
+Training Epoch: 77, total loss: 208.896774
+total_train_accuracy: tensor(0.7419, device='cuda:0')
+Training Epoch: 78, total loss: 202.764168
+total_train_accuracy: tensor(0.6972, device='cuda:0')
+Training Epoch: 79, total loss: 207.049203
+total_train_accuracy: tensor(0.7012, device='cuda:0')
+Training Epoch: 80, total loss: 208.159479
+total_train_accuracy: tensor(0.7134, device='cuda:0')
+Training Epoch: 81, total loss: 206.718990
+total_train_accuracy: tensor(0.7358, device='cuda:0')
+Training Epoch: 82, total loss: 203.616395
+total_train_accuracy: tensor(0.7419, device='cuda:0')
+Training Epoch: 83, total loss: 203.337011
+total_train_accuracy: tensor(0.7398, device='cuda:0')
+Training Epoch: 84, total loss: 203.581222
+total_train_accuracy: tensor(0.7154, device='cuda:0')
+Training Epoch: 85, total loss: 205.453857
+total_train_accuracy: tensor(0.7154, device='cuda:0')
+Training Epoch: 86, total loss: 207.110602
+total_train_accuracy: tensor(0.7358, device='cuda:0')
+Training Epoch: 87, total loss: 202.688631
+total_train_accuracy: tensor(0.7256, device='cuda:0')
+Training Epoch: 88, total loss: 204.739365
+total_train_accuracy: tensor(0.7256, device='cuda:0')
+Training Epoch: 89, total loss: 205.464205
+total_train_accuracy: tensor(0.7195, device='cuda:0')
+Training Epoch: 90, total loss: 204.829082
+total_train_accuracy: tensor(0.7337, device='cuda:0')
+Training Epoch: 91, total loss: 203.954072
+total_train_accuracy: tensor(0.7215, device='cuda:0')
+Training Epoch: 92, total loss: 205.407290
+total_train_accuracy: tensor(0.7114, device='cuda:0')
+Training Epoch: 93, total loss: 205.405134
+total_train_accuracy: tensor(0.6870, device='cuda:0')
+Training Epoch: 94, total loss: 207.757309
+total_train_accuracy: tensor(0.7134, device='cuda:0')
+Training Epoch: 95, total loss: 205.379616
+total_train_accuracy: tensor(0.7215, device='cuda:0')
+Training Epoch: 96, total loss: 205.754263
+total_train_accuracy: tensor(0.7297, device='cuda:0')
+Training Epoch: 97, total loss: 204.050694
+total_train_accuracy: tensor(0.7663, device='cuda:0')
+Training Epoch: 98, total loss: 199.567032
+total_train_accuracy: tensor(0.7256, device='cuda:0')
+Training Epoch: 99, total loss: 206.100563
+total_train_accuracy: tensor(0.7236, device='cuda:0')
+Training Epoch: 100, total loss: 205.080751
+the  8  epoch ends
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+total_test_accuracy: tensor(0.8654, device='cuda:0')
+acc_test_each_k: tensor(0.8654, device='cuda:0')
+549 3301
+549 3301
+total_train_accuracy: tensor(0.7073, device='cuda:0')
+Training Epoch: 0, total loss: 205.902142
+total_train_accuracy: tensor(0.7317, device='cuda:0')
+Training Epoch: 1, total loss: 203.976635
+total_train_accuracy: tensor(0.7134, device='cuda:0')
+Training Epoch: 2, total loss: 206.009393
+total_train_accuracy: tensor(0.6972, device='cuda:0')
+Training Epoch: 3, total loss: 207.058857
+total_train_accuracy: tensor(0.7297, device='cuda:0')
+Training Epoch: 4, total loss: 203.979965
+total_train_accuracy: tensor(0.7175, device='cuda:0')
+Training Epoch: 5, total loss: 206.629055
+total_train_accuracy: tensor(0.7317, device='cuda:0')
+Training Epoch: 6, total loss: 204.427924
+total_train_accuracy: tensor(0.7317, device='cuda:0')
+Training Epoch: 7, total loss: 203.844660
+total_train_accuracy: tensor(0.7175, device='cuda:0')
+Training Epoch: 8, total loss: 204.636898
+total_train_accuracy: tensor(0.7378, device='cuda:0')
+Training Epoch: 9, total loss: 204.146489
+total_train_accuracy: tensor(0.6667, device='cuda:0')
+Training Epoch: 10, total loss: 209.300773
+total_train_accuracy: tensor(0.7236, device='cuda:0')
+Training Epoch: 11, total loss: 205.032860
+total_train_accuracy: tensor(0.7154, device='cuda:0')
+Training Epoch: 12, total loss: 204.086468
+total_train_accuracy: tensor(0.7236, device='cuda:0')
+Training Epoch: 13, total loss: 204.720163
+total_train_accuracy: tensor(0.6870, device='cuda:0')
+Training Epoch: 14, total loss: 207.209088
+total_train_accuracy: tensor(0.7480, device='cuda:0')
+Training Epoch: 15, total loss: 203.079339
+total_train_accuracy: tensor(0.7195, device='cuda:0')
+Training Epoch: 16, total loss: 204.919155
+total_train_accuracy: tensor(0.6931, device='cuda:0')
+Training Epoch: 17, total loss: 207.110346
+total_train_accuracy: tensor(0.7093, device='cuda:0')
+Training Epoch: 18, total loss: 205.742744
+total_train_accuracy: tensor(0.7317, device='cuda:0')
+Training Epoch: 19, total loss: 205.383223
+total_train_accuracy: tensor(0.6728, device='cuda:0')
+Training Epoch: 20, total loss: 210.770844
+total_train_accuracy: tensor(0.6382, device='cuda:0')
+Training Epoch: 21, total loss: 214.316272
+total_train_accuracy: tensor(0.7114, device='cuda:0')
+Training Epoch: 22, total loss: 205.190348
+total_train_accuracy: tensor(0.7581, device='cuda:0')
+Training Epoch: 23, total loss: 202.729106
+total_train_accuracy: tensor(0.7012, device='cuda:0')
+Training Epoch: 24, total loss: 206.333254
+total_train_accuracy: tensor(0.7114, device='cuda:0')
+Training Epoch: 25, total loss: 205.843680
+total_train_accuracy: tensor(0.7053, device='cuda:0')
+Training Epoch: 26, total loss: 206.007953
+total_train_accuracy: tensor(0.7358, device='cuda:0')
+Training Epoch: 27, total loss: 203.323895
+total_train_accuracy: tensor(0.7134, device='cuda:0')
+Training Epoch: 28, total loss: 206.637320
+total_train_accuracy: tensor(0.7093, device='cuda:0')
+Training Epoch: 29, total loss: 205.476555
+total_train_accuracy: tensor(0.7317, device='cuda:0')
+Training Epoch: 30, total loss: 205.241732
+total_train_accuracy: tensor(0.7439, device='cuda:0')
+Training Epoch: 31, total loss: 201.779362
+total_train_accuracy: tensor(0.7073, device='cuda:0')
+Training Epoch: 32, total loss: 205.317411
+total_train_accuracy: tensor(0.7378, device='cuda:0')
+Training Epoch: 33, total loss: 203.810752
+total_train_accuracy: tensor(0.7419, device='cuda:0')
+Training Epoch: 34, total loss: 203.008640
+total_train_accuracy: tensor(0.7114, device='cuda:0')
+Training Epoch: 35, total loss: 205.806960
+total_train_accuracy: tensor(0.7175, device='cuda:0')
+Training Epoch: 36, total loss: 205.012591
+total_train_accuracy: tensor(0.7358, device='cuda:0')
+Training Epoch: 37, total loss: 202.189140
+total_train_accuracy: tensor(0.7480, device='cuda:0')
+Training Epoch: 38, total loss: 202.344193
+total_train_accuracy: tensor(0.7337, device='cuda:0')
+Training Epoch: 39, total loss: 203.487297
+total_train_accuracy: tensor(0.7256, device='cuda:0')
+Training Epoch: 40, total loss: 204.030490
+total_train_accuracy: tensor(0.7500, device='cuda:0')
+Training Epoch: 41, total loss: 201.898718
+total_train_accuracy: tensor(0.7093, device='cuda:0')
+Training Epoch: 42, total loss: 205.932580
+total_train_accuracy: tensor(0.7337, device='cuda:0')
+Training Epoch: 43, total loss: 204.069996
+total_train_accuracy: tensor(0.7378, device='cuda:0')
+Training Epoch: 44, total loss: 203.916821
+total_train_accuracy: tensor(0.7398, device='cuda:0')
+Training Epoch: 45, total loss: 203.246783
+total_train_accuracy: tensor(0.7012, device='cuda:0')
+Training Epoch: 46, total loss: 206.201659
+total_train_accuracy: tensor(0.7703, device='cuda:0')
+Training Epoch: 47, total loss: 200.137604
+total_train_accuracy: tensor(0.7215, device='cuda:0')
+Training Epoch: 48, total loss: 204.558161
+total_train_accuracy: tensor(0.7602, device='cuda:0')
+Training Epoch: 49, total loss: 199.647789
+total_train_accuracy: tensor(0.7459, device='cuda:0')
+Training Epoch: 50, total loss: 201.530383
+total_train_accuracy: tensor(0.7154, device='cuda:0')
+Training Epoch: 51, total loss: 204.526950
+total_train_accuracy: tensor(0.7256, device='cuda:0')
+Training Epoch: 52, total loss: 204.951796
+total_train_accuracy: tensor(0.7500, device='cuda:0')
+Training Epoch: 53, total loss: 201.860394
+total_train_accuracy: tensor(0.7317, device='cuda:0')
+Training Epoch: 54, total loss: 203.239184
+total_train_accuracy: tensor(0.7134, device='cuda:0')
+Training Epoch: 55, total loss: 206.436034
+total_train_accuracy: tensor(0.7154, device='cuda:0')
+Training Epoch: 56, total loss: 204.396308
+total_train_accuracy: tensor(0.7256, device='cuda:0')
+Training Epoch: 57, total loss: 203.179035
+total_train_accuracy: tensor(0.7215, device='cuda:0')
+Training Epoch: 58, total loss: 204.730352
+total_train_accuracy: tensor(0.7378, device='cuda:0')
+Training Epoch: 59, total loss: 202.471102
+total_train_accuracy: tensor(0.7500, device='cuda:0')
+Training Epoch: 60, total loss: 202.472218
+total_train_accuracy: tensor(0.7215, device='cuda:0')
+Training Epoch: 61, total loss: 205.241380
+total_train_accuracy: tensor(0.7114, device='cuda:0')
+Training Epoch: 62, total loss: 204.985683
+total_train_accuracy: tensor(0.7195, device='cuda:0')
+Training Epoch: 63, total loss: 205.012825
+total_train_accuracy: tensor(0.7276, device='cuda:0')
+Training Epoch: 64, total loss: 202.685650
+total_train_accuracy: tensor(0.6992, device='cuda:0')
+Training Epoch: 65, total loss: 206.104099
+total_train_accuracy: tensor(0.7419, device='cuda:0')
+Training Epoch: 66, total loss: 202.796283
+total_train_accuracy: tensor(0.7602, device='cuda:0')
+Training Epoch: 67, total loss: 200.537168
+total_train_accuracy: tensor(0.7114, device='cuda:0')
+Training Epoch: 68, total loss: 206.424928
+total_train_accuracy: tensor(0.7215, device='cuda:0')
+Training Epoch: 69, total loss: 205.615465
+total_train_accuracy: tensor(0.7276, device='cuda:0')
+Training Epoch: 70, total loss: 204.758797
+total_train_accuracy: tensor(0.7012, device='cuda:0')
+Training Epoch: 71, total loss: 206.108333
+total_train_accuracy: tensor(0.7093, device='cuda:0')
+Training Epoch: 72, total loss: 206.100350
+total_train_accuracy: tensor(0.7134, device='cuda:0')
+Training Epoch: 73, total loss: 205.136604
+total_train_accuracy: tensor(0.7439, device='cuda:0')
+Training Epoch: 74, total loss: 201.589490
+total_train_accuracy: tensor(0.7134, device='cuda:0')
+Training Epoch: 75, total loss: 206.819243
+total_train_accuracy: tensor(0.7256, device='cuda:0')
+Training Epoch: 76, total loss: 204.012032
+total_train_accuracy: tensor(0.7358, device='cuda:0')
+Training Epoch: 77, total loss: 204.347402
+total_train_accuracy: tensor(0.7215, device='cuda:0')
+Training Epoch: 78, total loss: 205.172024
+total_train_accuracy: tensor(0.7114, device='cuda:0')
+Training Epoch: 79, total loss: 205.520653
+total_train_accuracy: tensor(0.7256, device='cuda:0')
+Training Epoch: 80, total loss: 204.843693
+total_train_accuracy: tensor(0.7073, device='cuda:0')
+Training Epoch: 81, total loss: 207.391136
+total_train_accuracy: tensor(0.7419, device='cuda:0')
+Training Epoch: 82, total loss: 201.703689
+total_train_accuracy: tensor(0.7053, device='cuda:0')
+Training Epoch: 83, total loss: 206.733101
+total_train_accuracy: tensor(0.7134, device='cuda:0')
+Training Epoch: 84, total loss: 204.949618
+total_train_accuracy: tensor(0.7134, device='cuda:0')
+Training Epoch: 85, total loss: 205.190784
+total_train_accuracy: tensor(0.7317, device='cuda:0')
+Training Epoch: 86, total loss: 203.482983
+total_train_accuracy: tensor(0.7276, device='cuda:0')
+Training Epoch: 87, total loss: 203.696765
+total_train_accuracy: tensor(0.7175, device='cuda:0')
+Training Epoch: 88, total loss: 204.745483
+total_train_accuracy: tensor(0.6992, device='cuda:0')
+Training Epoch: 89, total loss: 206.742919
+total_train_accuracy: tensor(0.7236, device='cuda:0')
+Training Epoch: 90, total loss: 205.090621
+total_train_accuracy: tensor(0.7419, device='cuda:0')
+Training Epoch: 91, total loss: 203.082801
+total_train_accuracy: tensor(0.7256, device='cuda:0')
+Training Epoch: 92, total loss: 203.620902
+total_train_accuracy: tensor(0.7114, device='cuda:0')
+Training Epoch: 93, total loss: 206.457083
+total_train_accuracy: tensor(0.7358, device='cuda:0')
+Training Epoch: 94, total loss: 201.992771
+total_train_accuracy: tensor(0.7012, device='cuda:0')
+Training Epoch: 95, total loss: 206.377126
+total_train_accuracy: tensor(0.7358, device='cuda:0')
+Training Epoch: 96, total loss: 203.728216
+total_train_accuracy: tensor(0.7195, device='cuda:0')
+Training Epoch: 97, total loss: 204.218956
+total_train_accuracy: tensor(0.6809, device='cuda:0')
+Training Epoch: 98, total loss: 208.458293
+total_train_accuracy: tensor(0.7195, device='cuda:0')
+Training Epoch: 99, total loss: 204.028605
+total_train_accuracy: tensor(0.7358, device='cuda:0')
+Training Epoch: 100, total loss: 203.265295
+the  9  epoch ends
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+total_test_accuracy: tensor(0.8462, device='cuda:0')
+acc_test_each_k: tensor(0.8462, device='cuda:0')
+[tensor(0.6731, device='cuda:0'), tensor(0.7692, device='cuda:0'), tensor(0.8269, device='cuda:0'), tensor(0.8269, device='cuda:0'), tensor(0.9038, device='cuda:0'), tensor(0.9423, device='cuda:0'), tensor(0.9615, device='cuda:0'), tensor(0.9038, device='cuda:0'), tensor(0.8654, device='cuda:0'), tensor(0.8462, device='cuda:0')]
+[array(0.6730769, dtype=float32), array(0.7692308, dtype=float32), array(0.82692313, dtype=float32), array(0.82692313, dtype=float32), array(0.9038462, dtype=float32), array(0.9423077, dtype=float32), array(0.9615385, dtype=float32), array(0.9038462, dtype=float32), array(0.86538464, dtype=float32), array(0.84615386, dtype=float32)]
+acc_test_metrics: 0.8519231
+ConvAttMLP_new.py:1022: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  inputs=torch.tensor(inputs ,dtype=torch.float)
+ConvAttMLP_new.py:1023: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  targets=torch.tensor(targets ,dtype=torch.float)
+ConvAttMLP_new.py:970: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  x=torch.tensor(x,dtype=torch.float)
+ConvAttMLP_new.py:971: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  labels=torch.tensor(labels,dtype=torch.float)
+ConvAttMLP_new.py:1022: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  inputs=torch.tensor(inputs ,dtype=torch.float)
+ConvAttMLP_new.py:1023: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  targets=torch.tensor(targets ,dtype=torch.float)
+ConvAttMLP_new.py:970: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  x=torch.tensor(x,dtype=torch.float)
+ConvAttMLP_new.py:971: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  labels=torch.tensor(labels,dtype=torch.float)
+ConvAttMLP_new.py:1022: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  inputs=torch.tensor(inputs ,dtype=torch.float)
+ConvAttMLP_new.py:1023: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  targets=torch.tensor(targets ,dtype=torch.float)
+ConvAttMLP_new.py:1206: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  inputs=torch.tensor(inputs,dtype=torch.float)
+ConvAttMLP_new.py:1207: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  targets=torch.tensor(targets,dtype=torch.float)
+ConvAttMLP_new.py:1206: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  inputs=torch.tensor(inputs,dtype=torch.float)
+ConvAttMLP_new.py:1207: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  targets=torch.tensor(targets,dtype=torch.float)
+ConvAttMLP_new.py:1300: DeprecationWarning: scipy.interp is deprecated and will be removed in SciPy 2.0.0, use numpy.interp instead
+  mean_tpr += interp(all_fpr, fpr[i], tpr[i])
+ConvAttMLP_new.py:1300: DeprecationWarning: scipy.interp is deprecated and will be removed in SciPy 2.0.0, use numpy.interp instead
+  mean_tpr += interp(all_fpr, fpr[i], tpr[i])
+ConvAttMLP_new.py:1300: DeprecationWarning: scipy.interp is deprecated and will be removed in SciPy 2.0.0, use numpy.interp instead
+  mean_tpr += interp(all_fpr, fpr[i], tpr[i])
+ConvAttMLP_new.py:1300: DeprecationWarning: scipy.interp is deprecated and will be removed in SciPy 2.0.0, use numpy.interp instead
+  mean_tpr += interp(all_fpr, fpr[i], tpr[i])
+ConvAttMLP_new.py:1300: DeprecationWarning: scipy.interp is deprecated and will be removed in SciPy 2.0.0, use numpy.interp instead
+  mean_tpr += interp(all_fpr, fpr[i], tpr[i])
+ConvAttMLP_new.py:1300: DeprecationWarning: scipy.interp is deprecated and will be removed in SciPy 2.0.0, use numpy.interp instead
+  mean_tpr += interp(all_fpr, fpr[i], tpr[i])
+ConvAttMLP_new.py:1300: DeprecationWarning: scipy.interp is deprecated and will be removed in SciPy 2.0.0, use numpy.interp instead
+  mean_tpr += interp(all_fpr, fpr[i], tpr[i])
+ConvAttMLP_new.py:1300: DeprecationWarning: scipy.interp is deprecated and will be removed in SciPy 2.0.0, use numpy.interp instead
+  mean_tpr += interp(all_fpr, fpr[i], tpr[i])
+ConvAttMLP_new.py:1300: DeprecationWarning: scipy.interp is deprecated and will be removed in SciPy 2.0.0, use numpy.interp instead
+  mean_tpr += interp(all_fpr, fpr[i], tpr[i])
+ConvAttMLP_10layers(
+  (bn0): BatchNorm1d(3300, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (fc1): Linear(in_features=3300, out_features=1100, bias=True)
+  (fc11): Linear(in_features=1100, out_features=1100, bias=True)
+  (bn1): BatchNorm1d(1100, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (fc2): Linear(in_features=2200, out_features=100, bias=True)
+  (bn2): BatchNorm1d(100, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (fc3): Linear(in_features=100, out_features=9, bias=True)
+  (bn3): BatchNorm1d(9, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (drop): Dropout(p=0.5, inplace=False)
+  (conv1): Conv1d(1, 8, kernel_size=(5,), stride=(1,), padding=(2,))
+  (conv2): Conv1d(8, 16, kernel_size=(5,), stride=(1,), padding=(2,))
+  (conv3): Conv1d(16, 16, kernel_size=(5,), stride=(1,), padding=(2,))
+  (conv4): Conv1d(16, 1, kernel_size=(1,), stride=(1,))
+  (bn4): BatchNorm1d(3300, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn5): BatchNorm1d(3300, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (pool2): MaxPool1d(kernel_size=3, stride=3, padding=0, dilation=1, ceil_mode=False)
+  (pool3): MaxPool1d(kernel_size=3, stride=3, padding=0, dilation=1, ceil_mode=False)
+  (bn6): BatchNorm1d(1100, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn7): BatchNorm1d(2200, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (avg_pool): AvgPool1d(kernel_size=(3300,), stride=(3300,), padding=(0,))
+  (max_pool): MaxPool1d(kernel_size=3300, stride=3300, padding=0, dilation=1, ceil_mode=False)
+  (fc): Sequential(
+    (0): Conv1d(16, 2, kernel_size=(1,), stride=(1,), bias=False)
+    (1): ReLU()
+    (2): Conv1d(2, 16, kernel_size=(1,), stride=(1,), bias=False)
+    (3): Sigmoid()
+  )
+  (layers): ModuleList(
+    (0): Sequential(
+      (0): Conv1d(1, 8, kernel_size=(5,), stride=(1,), padding=(2,))
+      (1): BatchNorm1d(3300, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): Conv1d(8, 16, kernel_size=(5,), stride=(1,), padding=(2,))
+      (3): Conv1d(16, 16, kernel_size=(5,), stride=(1,), padding=(2,))
+      (4): Conv1d(16, 1, kernel_size=(1,), stride=(1,))
+      (5): AvgPool1d(kernel_size=(3300,), stride=(3300,), padding=(0,))
+      (6): MaxPool1d(kernel_size=3300, stride=3300, padding=0, dilation=1, ceil_mode=False)
+    )
+    (1): Sequential(
+      (0): Conv1d(1, 8, kernel_size=(5,), stride=(1,), padding=(2,))
+      (1): BatchNorm1d(3300, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): Conv1d(8, 16, kernel_size=(5,), stride=(1,), padding=(2,))
+      (3): Conv1d(16, 16, kernel_size=(5,), stride=(1,), padding=(2,))
+      (4): Conv1d(16, 1, kernel_size=(1,), stride=(1,))
+      (5): AvgPool1d(kernel_size=(3300,), stride=(3300,), padding=(0,))
+      (6): MaxPool1d(kernel_size=3300, stride=3300, padding=0, dilation=1, ceil_mode=False)
+    )
+  )
+)
+138 3301
+f1_score:  %.4f 0.7823825008596363
+accuracy_score: 0.782608695652174
+recall_score: 0.7635839178976433
+pre_recall: 0.8484093229707265
+n_classes: 9
